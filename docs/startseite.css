@@ -52,7 +52,7 @@ header {
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color 0.3s;
-    margin: 10px 0; /* Vertikale Abstände zwischen den Buttons */
+    margin: 5px 0; /* Vertikale Abstände zwischen den Buttons */
 }
 
 
