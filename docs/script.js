@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Federung': {
             prices: [210000, 270000, 240000, 0],
             selector: '#federung'
+
         },
         'Getriebe': {
             prices: [270000, 420000, 300000, 0],
@@ -468,11 +469,9 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     }
 
     // 6. Ausgewählte Zuordnung aus dem Dropdown "zuordnungSelect"
-    
-    const zuordnungSelect = $('#zuordnungSelect'); // Kein .select2() mehr!
+    const zuordnungSelect = $('#zuordnungSelect');
     const zuordnungValue = zuordnungSelect.val();
     const zuordnungText = zuordnungSelect.find("option:selected").text();
-
 
     console.log("Debug: Dropdown 'zuordnungSelect' value:", zuordnungValue);
 
@@ -501,10 +500,10 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     }
 
     // Gutschein-Text nur hinzufügen, wenn ein Gutschein verwendet wurde
-    const voucherText = voucherCount > 0 ? ` -- Gutschein: [${voucherCount}]` : "";
+    const voucherText = voucherCount > 0 ?  `-- Gutschein: [${voucherCount}]` : "";
 
     // Dienstnummer nur hinzufügen, wenn sie nicht leer ist
-    const dienstnummerText = dienstnummerValue ? ` -- Dienstnummer: ${dienstnummerValue}` : "";
+    const dienstnummerText = dienstnummerValue ?  `-- Dienstnummer: ${dienstnummerValue}` : "";
 
     // Zusammensetzen der Nachricht:
     const message = `${workerNumber} -- ${customerName} | ${finalPrice} | ${zuordnungText}${dienstnummerText}${voucherText}`;
