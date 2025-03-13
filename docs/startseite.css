@@ -18,7 +18,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: -60px;  /* Header wird 60px weiter nach oben verschoben */
+    margin-top: 0px;  /* Header wird 60px weiter nach oben verschoben */
     margin-bottom: 20px;
 }
 
