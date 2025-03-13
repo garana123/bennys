@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mitarbeiter Login</title>
+    <link rel="stylesheet" href="mitarbeiter_log-in.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm">
+            <h1>Mitarbeiter Login</h1>
+            
+            <label for="dienstnummer">Dienstnummer:</label>
+            <input type="text" id="dienstnummer" required>
+            
+            <label for="passwort">Passwort:</label>
+            <input type="password" id="passwort" required>
+            
+            <button type="submit">Einloggen</button>
+        </form>
+    </div>
+
+    <script>
+        const validCredentials = {
+            "M1001": { password: "geheim123", page: "mitarbeiter_1.html" },
+            "M1002": { password: "sicher456", page: "mitarbeiter_2.html" },
+            "M1003": { password: "topsecret789", page: "mitarbeiter_3.html" }
+        };
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const dienstnummer = document.getElementById('dienstnummer').value;
+            const passwort = document.getElementById('passwort').value;
+
+            if (validCredentials[dienstnummer] && validCredentials[dienstnummer].password === passwort) {
+                window.location.href = validCredentials[dienstnummer].page;
+            } else {
+                alert("Falsche Dienstnummer oder Passwort!");
+            }
+        });
+    </script>
+</body>
+</html>
