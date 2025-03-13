@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suchbares Dropdown</title>
+    
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="mitarbeiter_log-in.css">
+    <link rel="stylesheet" href="mitarbeiter_1.css">
+</head>
+<body>
+    <!-- In mitarbeiter_1.html direkt nach <body> -->
+<h1 class="price-title">Preisliste</h1>
+    <div class="left-column">
+        <div class="selection-container">
+            <label class="main-option-item">
+                <input type="checkbox" class="check-box main-option" onclick="onlyOne(this)">
+                <span class="checkmark"></span>
+                Vanilla
+            </label>
+            <label class="main-option-item">
+                <input type="checkbox" class="check-box main-option" onclick="onlyOne(this)">
+                <span class="checkmark"></span>
+                Import
+            </label>
+            <label class="main-option-item">
+                <input type="checkbox" class="check-box main-option" onclick="onlyOne(this)">
+                <span class="checkmark"></span>
+                Motorrad/Quad
+            </label>
+            <label class="main-option-item">
+                <input type="checkbox" class="check-box main-option" onclick="onlyOne(this)">
+                <span class="checkmark"></span>
+                Heli/Flugzeug/Boot
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label>Name des Kunden</label>
+            <input type="text" id="kundenname" placeholder="Name">
+        </div>
+
+        <div class="input-group">
+            <label>Zuordnung</label>
+            <select id="zuordnungSelect">
+                <option value="zivilist">Zivilist</option>
+				<option value="bennys">Bennys</option>
+			<optgroup label="VIP Fraktionen">
+                <option value="FIB vip">FIB VIP - 20.03</option>
+				<option value="MD vip">MD VIP - 17.03</option>
+				<option value="MD vip Spezial Unit">MD Spezial Unit VIP - 17.03</option>
+			    <option value="PD vip">PD VIP - 03.05</option>
+				<option value="SD vip">SD VIP - 03.06</option>
+				<option value="US Marshals vip">US Marshals VIP - 23.03</option>
+				<option value="Azalea Syndikat VIP">Azalea Syndikat VIP - 09.03	</option>
+				<option value="Azalea Syndikat UG VIP">Azalea Syndikat VIP UG - 09.03	</option>
+				<option value="ICE Company VIP">ICE Company VIP - 01.02.2026</option>
+				<option value="Kizuna VIP">Kizuna VIP - 03.04</option>
+			    <option value="La Mano Azura MC VIP">La Mano Azura MC (LMC) VIP - 18.03</option>
+				<option value="Money Over Bitches (MOB) VIP">Money Over Bitches (MOB) VIP - 07.04</option>
+				<option value="Money Over Bitches (MOB) UG VIP">Money Over Bitches UG (MOBUG) VIP - 07.04</option>
+				<option value="OnePiece VIP">OnePiece VIP - 09.03</option>
+				<option value="OnePieceUG VIP">OnePiece UG VIP - 09.03</option>
+				<option value="Pe$o VIP">Pe$o VIP 21.03</option>
+				<option value="Pe$o UG VIP">Pe$o UG VIP 21.03</option>
+				<option value="Rezero VIP">ReZero VIP - 01.04</option>
+				<option value="RezeroUG VIP">ReZero UG VIP - 01.04</option>
+				<option value="Tokio Manji VIP">Tokio Manji VIP - 21.03</option>
+            </optgroup>
+			<optgroup label="Zivi VIP Kunden Lebenslang">
+								<option value="Alex Lang">Alex Lang - Lebenslang</option>
+								<option value="Emma Nackendick">Emma Nackendick - Lebenslang</option>
+								<option value="Emir pearce">Emir pearce - Lebenslang</option>
+								<option value="Karlson Tonic">Karlson Tonic - Lebenslang</option>
+								<option value="Luan Schoko Shakur">Luan Schoko Shakur - Lebenslang</option>
+								<option value="Norbert Nackendick">Norbert Nackendick - Lebenslang</option>
+								<option value="Sarah Tonic">Sarah Tonic - Lebenslang</option>
+								<option value="Vargo Azrail">Vargo Azrail - Lebenslang</option>
+			</optgroup>
+			<optgroup label="Zivi VIP Kunden Begrenzt">
+								<option value="Kylo Sanymaaa">Kylo Sanymaaa VIP - 07.04</option>
+								<option value="Ricardo Rwena">Ricardo Rwena VIP - 19.03</option>
+			</optgroup>
+			<optgroup label="Staatsfraktionen">
+								<option value="FIB VIP">FIB VIP</option>
+								<option value="MD VIP">MD VIP</option>
+								<option value="MD VIP Spezial Unit">MD Spezial Unit VIP</option>
+								<option value="PD VIP">PD VIP</option>
+								<option value="PD CID VIP">PD CID VIP</option>
+								<option value="PD GTF VIP">PD GTF VIP</option>
+								<option value="PD Jugular VIP">PD Jugular VIP</option>
+								<option value="PD JugularGTF VIP">PD Jugular (Backstep/GTV) VIP</option>
+								<option value="PD S.P.F.U VIP">PD S.P.F.U VIP</option>
+								<option value="PD SWAT VIP">PD SWAT VIP</option>
+								<option value="PD Unmarked VIP">PD Unmarked VIP</option>
+								<option value="SD VIP DOA">SD DOA VIP</option>
+								<option value="SD VIP Einsatz">SD Einsatz VIP</option>
+								<option value="SD VIP Jugular">SD Jugular VIP</option>
+								<option value="SD VIP Noose">SD Noose VIP</option>
+								<option value="SD VIP Unmarked">SD Unmarked VIP</option>
+								<option value="US Marshals VIP">US Marshals VIP</option>
+								<option value="US Marshals Unmarked VIP">US Marshals Unmarked VIP</option>
+                        </optgroup>
+			<optgroup label="Neutrale Fraktion">
+				
+								<option value="Unicorn">Unicorn</option>
+								<option value="Bennys">Bennys</option>
+			</optgroup>
+			<optgroup label="Kriminelle Organisation">
+								<option value="Blancos">Blancos</option>
+								<option value="Nameless">Nameless</option>		
+                                <option value="Quartier Nord">Quartier Nord</option>		
+			</optgroup>
+			<optgroup label="Biker">
+								<option value="Angels Of Death MC">Angels Of Death MC</option>
+								<option value="Outlaw MC">Outlaw MC</option>
+								<option value="Hellborn MC">Hellborn MC</option>
+			</optgroup>
+			<optgroup label="Gangs">
+								<option value="MG13">MG13</option>
+								<option value="Vagos">Vagos</option>
+            </optgroup>	
+			<optgroup label="inoffizielle Fraktionen">
+			</optgroup>
+			<optgroup label="Aufgeloeste Fraktionen">
+								<option value="18th Street Gang">18th Street Gang</option>
+                                <option value="Al Capone Mafia">Al Capone Mafia</option>
+								<option value="Al Hamady">Al Hamady</option>
+                                <option value="al Saafi">Al Saafi</option>
+                                <option value="Akatsuki">Akatsuki</option>
+                                <option value="ArslanMafia">Arslan Mafia</option>
+                                <option value="Ashura">Ashura</option>
+                                <option value="Athena">Athena</option>
+                                <option value="Ay Yildiz">Ay Yildiz</option>
+								<option value="Ayaz">Ayaz</option>
+                                <option value="Aztecas">Aztecas</option>
+								<option value="Azzlacks">Azzlacks</option>
+                                <option value="Ballas">Ballas</option>
+                                <option value="Bandidos MC">Bandidos MC</option>
+                                <option value="Barrio 18th">Barrio 18th</option>
+                                <option value="Black Angels">Black Angels</option>
+                                <option value="Black Devils">Black Devils</option>
+                                <option value="Black Gangster Diciple">Black Gangster Diciple</option>
+								<option value="Black Kartell">Black Kartell</option>
+                                <option value="Blackside MC">Blackside MC</option>
+                                <option value="Black Water Kartell">Black Water Kartell</option>
+                                <option value="Blaze">Blaze</option>
+                                <option value="Bloods">Bloods</option>
+                                <option value="Blue Angels">Blue Angels</option>
+                                <option value="Bound by Blood MC">Bound by Blood MC</option>
+                                <option value="Bratwa">Bratwa</option>
+                                <option value="Bratwa Vostok">Bratwa Vostok</option>
+                                <option value="Brigada">Brigada</option>
+								<option value="Brotherhood">Brotherhood</option>
+                                <option value="Bruderschaft">Bruderschaft</option>
+                                <option value="Bozkurt">Bozkurt</option>
+                                <option value="Calavera">Calavera</option>
+                                <option value="Cali Kartell">Cali Kartell</option>
+                                <option value="Cartel De Madrazo">Cartel De Madrazo</option>
+                                <option value="Cartel Del Milenio">Cartel del Milenio</option>
+                                <option value="Cartel Di Simba">Cartel Di Simba</option>
+                                <option value="Club 77">Club 77</option>
+                                <option value="Club 77 Extra">Club 77 Extra</option>
+                                <option value="Construction Company">Construction Company</option>
+                                <option value="CJNG">CJNG</option>
+                                <option value="Crips">Crips</option>
+                                <option value="Cukur">Cukur</option>
+								<option value="Dark Frozen MC">Dark Frozen MC</option>
+								<option value="Dark Frozen MC UG Frozen Yogurt">Dark Frozen MC UG Frozen Yogurt</option>
+								<option value="Daru Street 66">Daru Street 66</option>
+                                <option value="De Santa">De Santa</option>	
+								<option value="El Bandoleros">El Bandoleros</option>
+                                <option value="El Chapos">El Chapos</option>
+                                <option value="El Muerte">El Muerte</option>
+								<option value="Es Death">Es Death</option>
+                                <option value="Fin Fatale">Fin Fatale</option>
+                                <option value="Galassia Kartell">Galassia Kartell</option>
+                                <option value="Galaxy Nightclub">Galaxy Nightclub</option>
+                                <option value="Gambino">Gambino</option>
+                                <option value="GMF Genovesen Mafia">GMF Genovesen Mafia</option>
+                                <option value="Grove Street">Grove Street</option>
+								<option value="Grypsera">Grypsera</option>
+                                <option value="Haci´s">Haci´s</option>
+                                <option value="Hellbanianz London MC">Hellbanianz London MC</option>
+                                <option value="Hoover Criminals">Hoover Criminals</option>
+                                <option value="Hoover Crips">Hoover Crips</option>
+                                <option value="Hustlers">Hustlers</option>
+								<option value="International Contract Agency">International Contract Agency</option>
+								<option value="International Contract Agency UG Men in Black">International Contract Agency UG Men in Black</option>
+                                <option value="Intikam">Intikam</option>
+                                <option value="Irish Mob">Irish Mob</option>
+                                <option value="Isabella">Isabella</option>
+								<option value="Jokerz">Jokerz</option>
+                                <option value="Kanun">Kanun</option>
+                                <option value="Kara Kartell">Kara Kartell</option>
+          				    	<option value="Kara Kuzular">Kara Kuzular</option>
+                                <option value="Kartal Mafia">Kartal Mafia</option>
+                                <option value="Kuzengs">Kuzengs</option>
+                                <option value="La Camorra">La Camorra</option>
+                                <option value="La Cosa Nostra">La Cosa Nostra</option>
+                                <option value="La Eme">La Eme</option>
+                                <option value="La Familia Diaz">La Familia Diaz</option>
+                                <option value="La Familia Kara">La Familia Kara</option>
+                                <option value="La Rosa San Grante">La Rosa San Grante</option>
+                                <option value="Lacost">Lacost</option>
+                                <option value="LingLing Gossenkartell">LingLing Gossenkartell</option>
+								<option value="Living Legends MC">Living Legends MC</option>
+                                <option value="Los Cachiros Cartel">Los Cachiros Cartel</option>
+                                <option value="Los Juarez">Los Juarez</option>
+                                <option value="Los Miras Kartell">Los Miras Kartell</option>
+                                <option value="Los Netas">Los Netas</option>
+                                <option value="Los Trinitarios">Los Trinitarios</option>
+                                <option value="Los Zetas">Los Zetas</option>
+                                <option value="Lost MC">Lost MC</option>
+                                <option value="Luani Farbe">Luani Farbe</option>
+                                <option value="LVE">LVE</option>
+                                <option value="Malibou Cartell">Malibou Cartell</option>
+                                <option value="FOA X Unit">FOA X Unit</option>
+                                <option value="Mayans">Mayans</option>
+                                <option value="Medellin Cartell">Medellin Cartell</option>
+								<option value="Midnight">Midnight</option>
+								<option value="Milenio">Milenio</option>
+                                <option value="Mocro Mafia">Mocro Mafia</option>
+                                <option value="MS13">MS13</option>
+                                <option value="Myhtos Marseille">Myhtos Marseille</option>
+								<option value="Muchachos">Muchachos</option>
+                                <option value="Naki Kartell">Naki Kartell</option>
+                                <option value="Narcos">Narcos</option>
+                                <option value="Navaro">Navaro</option>
+                                <option value="Ndrangetha">Ndrangetha</option>
+                                <option value="O´Block">O´Block</option>
+                                <option value="Oktogramm OG">Oktogramm OG</option>
+                                <option value="Omerta Kartell">Omerta Kartell</option>
+                                <option value="O´neil Brothers">O´neil Brothers</option>
+								<option value="Organisazija">Organisazija</option>
+								<option value="Organisazija UG">Organisazija UG</option>
+                                <option value="Osmanen">Osmanen</option>
+                                <option value="Para La Familia">Para La Familia</option>
+                                <option value="Peckham">Peckham</option>
+                                <option value="Que la Familia">Que la Familia</option>
+                                <option value="Ramo Mafia">Ramo Mafia</option>
+                                <option value="RedAce MC">RedAce MC</option>
+                                <option value="Red Light">Red Light</option>
+                                <option value="Rednecks">Rednecks</option>
+                                <option value="Rifa">Rifa</option>
+								<option value="Rosa de Lima">Rosa de Lima</option>
+								<option value="Rosa de Lima UG Ninita Rosa Eredita">Rosa de Lima UG Ninita Rosa Eredita</option>
+                                <option value="Ruff Ryders">Ruff Ryders</option>
+                                <option value="Sachra Corona Unita">Sachra Corona Unita</option>
+                                <option value="Saints">Saints</option>
+                                <option value="Sakura">Sakura</option>
+                                <option value="Santa Muerte">Santa Muerte</option>
+								<option value="Santa Sofia UG Eredita">Santa Sofia UG Eredita</option>
+                                <option value="Scaletta">Scaletta</option>
+                                <option value="Sentinel">Sentinel</option>
+                                <option value="Scandinavian Tribe">Scandinavian Tribe</option>
+                                <option value="Shoreline Crips">Shoreline Crips</option>
+                                <option value="Sons of Anarchy">Sons of Anarchy</option>
+								<option value="Sons Of Silence">Sons Of Silence</option>
+                                <option value="Souls MC">Souls MC</option>
+                                <option value="South Side Bloods MC">South Side Bloods MC</option>
+                                <option value="Star La Rue">Star La Rue</option>
+                                <option value="Street Money Murders">Street Money Murders</option>
+                                <option value="Surenos 13">Surenos 13</option>
+                                <option value="Syndicate">Syndicate</option>
+                                <option value="Taxi">Taxi</option>
+                                <option value="Tetes Lacos">Tetes Lacos</option>
+								<option value="Triaden">Triaden</option>
+                                <option value="Tirana MC">Tirana MC</option>
+                                <option value="Tschetschenen">Tschetschenen</option>
+                                <option value="Tueurs Glace">Tueurs Glace</option>
+                                <option value="Underdog MC">Underdog MC</option>
+								<option value="Valerio VIP - 01.03.2025">Valerio</option>
+                                <option value="Van der Straat">Van der Straat</option>
+                                <option value="Van de Brakka">Van de Brakka</option>
+                                <option value="Vatos Locos">Vatos Locos</option>
+                                <option value="Vendetta">Vendetta</option>
+								<option value="V13">V13</option>
+                                <option value="Westside Locos 13">Westside Locos 13</option>
+								<option value="White Tigers">White Tigers</option>
+								<option value="Wutang">Wutang</option>
+								<option value="Yakuza">Yakuza</option>
+                                <option value="Yardies">Yardies</option>
+								<option value="Yellow Ace MC">Yellow Ace MC</option>			
+                                <option value="Zero Tolerance">Zero Tolerance</option>
+				
+			</optgroup>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Art des Autos:</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="contractType" value="privatauto" required>
+                    <span class="radio-checkmark"></span>
+                    Privatauto
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="contractType" value="frakdienstauto" required>
+                    <span class="radio-checkmark"></span>
+                    Frak/Dienstauto
+                </label>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Dienstnummer (falls vorhanden)</label>
+            <input type="number" id="dienstnummer" min="0">
+        </div>
+        <div class="gutschein-container">
+            <div class="gutschein-group">
+                <span>Gutschein 1:</span>
+                <select id="gutschein1" class="small-select">
+                    <option value="0">keiner</option>
+                    <option value="1">Vanilla-Tuning</option>
+                    <option value="3">Lackierung</option>
+                    <option value="5">Felgen</option>
+                    <option value="4">Kennzeichen</option>
+                    <option value="6">Hupen</option>
+                    <option value="7">Fenstertönung</option>
+                    <option value="2">Import-Tuning</option>
+                </select>
+            </div>
+            
+            <div class="gutschein-group">
+                <span>Gutschein 2:</span>
+                <select id="gutschein2" class="small-select">
+                    <option value="0">keiner</option>
+                    <option value="1">Vanilla-Tuning</option>
+                    <option value="3">Lackierung</option>
+                    <option value="5">Felgen</option>
+                    <option value="4">Kennzeichen</option>
+                    <option value="6">Hupen</option>
+                    <option value="7">Fenstertönung</option>
+                    <option value="2">Import-Tuning</option>
+                </select>
+            </div>
+        </div>
+     
+        
+        
+
+        <div class="dienstnummer-info">
+            Dienstnummer des Arbeiters: 01
+        </div>
+    </div>
+
+    <div class="middle-column">
+        <div class="selection-container">
+            <!-- Erste Gruppe -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="fulltune">
+                <span class="checkmark"></span>
+                Fulltune
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="bremsen">
+                <span class="checkmark"></span>
+                Bremsen
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="getriebe">
+                <span class="checkmark"></span>
+                Getriebe
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="motor">
+                <span class="checkmark"></span>
+                Motor
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="turbo">
+                <span class="checkmark"></span>
+                Turbo
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="federung">
+                <span class="checkmark"></span>
+                Federung
+            </label> 
+            <!-- Weitere 5 Items -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="panzerung">
+                <span class="checkmark"></span>
+                Panzerung
+            </label>
+    
+            <div class="category-gap"></div>
+    
+            <!-- Zweite Gruppe -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="primaerfarbe">
+                <span class="checkmark"></span>
+                Primärfarbe
+            </label>
+
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="sekundaerfarbe">
+                <span class="checkmark"></span>
+                Sekundärfarbe
+            </label>
+            <!-- Weitere 2 Items -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="perleffekt">
+                <span class="checkmark"></span>
+                Perleffekt
+            </label>
+    
+            <div class="category-gap"></div>
+    
+            <!-- Felgen Auswahl -->
+
+            <div class="felgen-group">
+                <span>Felgen:</span>
+                <select id="felgen" class="small-select">
+                    <option value="0">keine</option>
+                    <option value="1">normal</option>
+                    <option value="2">import</option>
+                </select>
+            </div>
+    
+            <!-- Letzte Gruppe -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="reifenfarbe">
+                <span class="checkmark"></span>
+                Reifenfarbe
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="reifenqualm">
+                <span class="checkmark"></span>
+                Reifenqualm
+            </label>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="selection-container">
+            <!-- Erste Gruppe -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="interieur">
+                <span class="checkmark"></span>
+                Interieur
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="quarterdeck">
+                <span class="checkmark"></span>
+                Quarterdeck
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="hupe">
+                <span class="checkmark"></span>
+                Hupe
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="fenstertoenung">
+                <span class="checkmark"></span>
+                Fenstertönung
+            </label>
+            <!-- Weitere 4 Items -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="sticker">
+                <span class="checkmark"></span>
+                Sticker
+            </label>
+    
+            <!-- Fahrzeugteile mit Buttons -->
+            <div class="counter-group">
+                <span>Fahrzeugteile (<span id="fahrzeugteile-anzahl">0</span>)</span>
+                <div class="button-container">
+                    <button class="counter-btn" id="fahrzeugteile-plus">+1</button>
+                    <button class="counter-btn" id="fahrzeugteile-minus">-1</button>
+                    
+                </div>
+            </div>
+    
+            <!-- Zweite Gruppe -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="unterboden">
+                <span class="checkmark"></span>
+                Unterboden
+            </label>
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="xenon">
+                <span class="checkmark"></span>
+                Xenon Scheinwerfer
+            </label>
+            <!-- Weitere 2 Items -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="nummernschild">
+                <span class="checkmark"></span>
+                Nummernschild (Farbe)
+            </label>
+    
+            <div class="category-gap"></div>
+    
+            <!-- Einzelnes Kästchen -->
+            <label class="option-item">
+                <input type="checkbox" class="check-box" id="customkennzeichen">
+                <span class="checkmark"></span>
+                Custom-Kennzeichen
+            </label>
+    
+            <!-- Headlights Dropdown -->
+            <div class="headlights-group">
+                <span>Headlights:</span>
+                <select id="headlights" class="small-select">
+                    <option value="0">keine</option>
+                    <option value="1">angebaut + Farbe</option>
+                    <option value="2">nur Farbe</option>
+                </select>
+            </div>
+    </div>
+    <!-- Vor dem Senden-Button in mitarbeiter_1.html -->
+<!-- In deiner Preisliste (wo die 0 steht) -->
+<span id="total-price">0</span>
+    <button class="send-button" id="sendenButton">Senden</button>  
+    <script src="script.js"></script>
+</body>
+</html>
