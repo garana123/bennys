@@ -341,7 +341,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        priceDisplay.textContent = new Intl.NumberFormat('de-DE').format(total);
+        priceDisplay.textContent = new Intl.NumberFormat('de-DE', { useGrouping: false }).format(total);
+
     }
 
     // Event-Listener für Main Options mit Reset der Gruppen
