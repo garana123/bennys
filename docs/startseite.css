@@ -34,7 +34,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Zwei gleich breite Spalten */
     gap: 10px 90px; /* Abstand zwischen den Buttons */
-    width: 80%;
+    width: 90%;
     max-width: 800px;
 }
 
