@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Debug: Dropdown 'zuordnungSelect' value:", optionVal);
             if (optionVal === 'bennys') {
                 total *= 0.5;
-            } else if (optionVal.includes('vip')) {
+            } else if (optionVal.includes('vip2')) {
                 total *= 0.6
             } else if (optionVal.includes('vip')) {
                 // Wenn Fahrzeugtyp bereits gewählt, entsprechend 30 % (privatauto) oder 40 % (frakdienstauto)
