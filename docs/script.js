@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // DOM-Elemente
-    const mainOptions = document.querySelectorAll('.main-option-item');
+    const mainOptions = document.querySelectorAll('.main-option');
     const priceDisplay = document.getElementById('total-price');
 
     // Gutschein-Handler: beide Voucher-Dropdowns werden hier verarbeitet
