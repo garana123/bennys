@@ -1,0 +1,419 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    font-size: 1.1em;
+}
+
+.left-column {
+    position: absolute;
+    left: 3%;
+    top: 10vh;
+    width: 33%;
+    bottom: 9.16vh;
+}
+
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 77%;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 9px 13px;
+    border-radius: 4.4px;
+    background-color: #1a1a1a;
+    transition: all 0.22s;
+    width: 77%;
+}
+
+.option-item:hover {
+    background-color: #2d2d2d;
+    transform: translateX(5.5px);
+}
+
+
+.check-box {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    background-color: #333;
+    border: 2.2px solid #444;
+    margin-right: 11px;
+    flex-shrink: 0;
+}
+
+.check-box:checked ~ .checkmark {
+    background-color: #0066cc;
+    border-color: #0052a3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6.6px;
+    top: 2.2px;
+    width: 5.5px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2.2px 2.2px 0;
+    transform: rotate(45deg);
+}
+
+.check-box:checked ~ .checkmark:after {
+    display: block;
+}
+
+.input-group {
+    margin: 28px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 1em;
+    color: #cccccc;
+}
+
+input, select {
+    width: 82.5%;
+    padding: 12px;
+    background-color: #222;
+    border: 1.1px solid #333;
+    border-radius: 4.4px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.dienstnummer-info {
+    margin-top: 20px;
+    padding-top: 16.5px;
+    color: #888;
+    position: relative; /* Neu */
+}
+
+.dienstnummer-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 90%; /* Länge der Linie hier anpassen */
+    height: 1.1px;
+    background: #333;
+}
+
+.middle-column {
+    position: absolute;
+    left: 36%; /* 3% (linke Spalte) + 30% (Breite linke Spalte) + 3% Abstand */
+    top: 10vh;
+    width: 30%;
+    bottom: 9.33vh;
+}
+
+.category-gap {
+    height: 6px; /* Größerer Abstand */
+    border-bottom: 1px solid #333;
+    margin: 6px 0;
+}
+
+.felgen-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    color: #cccccc;
+}
+
+.small-select {
+    width: 120px !important;
+    padding: 6px !important;
+    font-size: 0.9em;
+}
+
+.right-column {
+    position: absolute;
+    left: 69%; /* 3% + 33% + 33% */
+    top: 10vh;
+    width: 30%;
+    bottom: 8.33vh;
+}
+
+.counter-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+    padding: 8px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Füge dies hinzu */
+}
+
+.counter-btn {
+    width: 45px;
+    height: 25px;
+    background-color: #888;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2; /* Angepasste Zeilenhöhe */
+    padding-top: 10px; /* Reduzierter Offset */
+    font-size: 14px;
+}
+
+.counter-btn:hover {
+    background-color: #0056b3;
+}
+
+.counter-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.headlights-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    color: #cccccc;
+}
+.send-button {
+    position: fixed;
+    right: 3%;
+    bottom: 8.33vh;
+    width: 30%; /* Gleiche Breite wie die Spalten */
+    max-width: 300px; /* Maximalbreite für große Bildschirme */
+    padding: 12px 0;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.send-button:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+/* In mitarbeiter_1.css */
+.price-title {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+    z-index: 100;
+}
+
+/* In mitarbeiter_1.css */
+#price-counter {
+    position: fixed;
+    left: 69%; /* Gleicher Start wie rechte Spalte */
+    bottom: 8.33vh;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+/* Temporäre Hilfslinien */
+.gutschein-container {
+    display: flex; /* Untereinander statt nebeneinander */
+    gap: 1px;
+    margin: 25px 0;
+}
+
+.gutschein-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.small-select {
+    width: 150px !important;
+    padding: 6px !important;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 28px;
+}
+
+.radio-checkmark {
+    position: absolute;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 50%;
+}
+
+.radio-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+input:checked ~ .radio-checkmark {
+    background-color: #0066cc;
+    border-color: #0052a3;
+}
+
+input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+/* Deaktivierte Elemente */
+.check-box:disabled + .checkmark,
+select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+.check-box:disabled:checked + .checkmark {
+    background-color: #ccc;
+}
+
+.check-box:disabled ~ span {
+    color: #999;
+}
+.main-option-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 9px 13px;
+    border-radius: 4.4px;
+    background-color: #1a1a1a;
+    transition: all 0.22s;
+    width: 77%;
+}
+
+.main-option-item:hover {
+    background-color: #2d2d2d;
+    transform: translateX(5.5px);
+}
+
+/* Hintergrund des Dropdowns und Textfarbe der Standardoption */
+.select2-container--default .select2-selection--single {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Hintergrund der Dropdown-Liste dunkelgrau */
+.select2-container--default .select2-dropdown {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+/* Hintergrund und Schriftfarbe der Suchleiste */
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Schriftgröße der Dropdown-Optionen verkleinern */
+.select2-container--default .select2-results__option {
+    font-size: 14px;
+    color: white;
+}
+
+/* Hover- und ausgewählter Zustand */
+.select2-container--default .select2-results__option--highlighted {
+    background-color: #555;
+    color: white;
+}
+/* Entfernt den Abstand zwischen Suchleiste und Auswahlmöglichkeiten */
+.select2-container--default .select2-search--dropdown {
+    padding: 0;
+    margin: 0;
+}
+
+/* Reduziert die Höhe der Suchleiste für einen nahtlosen Übergang */
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    padding: 4px;
+    margin: 0;
+    height: auto;
+}
+
+/* Textfarbe für die ausgewählte Option im Input */
+.select2-container--default .select2-selection__rendered {
+    color: white !important;
+}
+
+/* Hintergrund der ausgewählten Option im Dropdown */
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #555; /* Hier kannst du auch die Hintergrundfarbe ändern */
+    color: white !important; /* Hier stellst du sicher, dass die Schrift weiß bleibt */
+}
+
+/* Hover- und ausgewählter Zustand der Dropdown-Option */
+.select2-container--default .select2-results__option--highlighted {
+    background-color: #555;
+    color: white;
+}
+.fett {
+    font-weight: bold;
+}
