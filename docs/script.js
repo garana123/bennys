@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'Fenstertönung': {
             prices: [30000, 39000, 27000, 120000],
-            selector: '#fenster'
+            selector: '#fenstertoenung'
         },
         'Sticker': {
             prices: [30000, 36000, 30000, 180000],
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'Hupen': {
             prices: [27000, 28500, 27000, 0],
-            selector: '#hupen'
+            selector: '#hupe'
         },
         'Interieur': {
             prices: [72000, 45000, 30000, 0],
