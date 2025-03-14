@@ -232,6 +232,95 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const zuordnungSelectElement = document.getElementById('zuordnungSelect');
+    if (zuordnungSelectElement) {
+        const infoBox = document.getElementById('zuordnungInfo');
+        const optionInfo = {
+            'bennys': 'Primär: Matt Schwarz <br> Sekundär: Matt Schwarz <br> Perleffekt: Zitrus Grün <br> Reifenqualm: Lime Green <br> Unterboden: Lime Green',
+            'fib vip': 'Codewort: Durchreise <br> Es wird nicht nach dem Ausweis gefragt! (erst ab DN 90) (Ausnahme: DN 99) <br> Um die DN festzustellen Frage einfach:"Wie lange bist du schon auf Durchreise" <br> Die Ränge Recruit, Trainee und Junior Agent tunen Dienstfahrzeuge kostenlos',
+            'md vip': 'Primär: #ffffff <br> Sekundär: #ffffff <br> Perlerffekt: Nichts (Schwarz) <br> Keine Troll Felgen und keine Fenstertönung <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
+            'md vip spezial unit': 'Primär: HEX: #008c7d <br> Sekundär: HEX: #008c7d <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
+            'md vip': 'Primär: #ffffff <br> Sekundär: #ffffff <br> Perlerffekt: Nichts (Schwarz) <br> Keine Troll Felgen und keine Fenstertönung <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
+            'pd vip': 'Primärfarbe: Öl Schwarz <br> Sekundärfarbe: Öl Schwarz <br> Perleffekt: Öl Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
+            'sd vip': 'Primärfarbe: Gebürstetes Aluminium (chrome)Sekundärfarbe: Alabster WeißPerleffekt: Creme(Weiss)Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos',
+            'us marshals vip': 'Primärfarbe: Jagt GrünSekundärfarbe: Jagt GrünPerleffekt: Jagt GrünInfo: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos',
+            'azalea syndikat vip': 'Primärfarbe: Zuckerpflaume (Rosa)Sekundärfarbe: Zuckerpflaume (Rosa)Perleffekt: KaugummiblauReifenqualm: ./.Info: ./.',
+            'azalea syndikat ug vip': 'Primärfarbe: WeinrotSekundärfarbe: ./.Perleffekt: CremeweißReifenqualm: ./.Info: ./.',
+            'ice company vip': 'Primärfarbe: DiamantblauSekundärfarbe: Kaugummi BlauPerleffekt: Alabaster weißReifenqualm: ./.',
+            'kizuna vip': 'Primärfarbe: Dunkle Erde (Braun)Sekundärfarbe: Dunkle Erde (Braun)Perleffekt: Creme WeißReifenqualm: ./.Info: /',
+            'la mano azura mc vip': 'Primärfarbe: Azure ( Blau )Sekundärfarbe: Azure ( Blau )Perleffekt: AlbasterweißReifenqualm: /Unterboden: /', 
+            'money over bitches (mob) vip': 'Primärfarbe: Topaz (blau)Sekundärfarbe: Topaz (blau)Perleffekt: LimonengrünReifenqualm: ./.', 
+            'money over bitches (mob) ug vip': 'Primärfarbe: Matt SchwarzSekundärfarbe: RasengrünPerleffekt: RasengrünReifenqualm: ./.', 
+            'onepiece vip': 'Primärfarbe: Hex: #aeb6bfSekundärfarbe: Hex: #aeb6bfPerleffekt: 7. Reihe, das vierte (Helles Gold)Reifenqualm: ./.',
+            'onepieceug vip': 'Primärfarbe: MattschwarzSekundärfarbe: /Perleffekt: Helles Gold',
+            'pe$o vip': 'Primärfarbe: #797582Sekundärfarbe: #797582Perleffekt: Schwarz (Nichts)Reifenqualm: ./.',
+            'pe$o ug vip': 'Primärfarbe: #260000Sekundärfarbe: ./.Perleffekt: SchwarzReifenqualm: ./.',
+            'rezero vip': 'Primärfarbe: Mystisches LilaSekundärfarbe: ./.Perleffekt: Lila MetallicReifenqualm: ./.',
+            'rezeroug vip': 'Primärfarbe: Matt SchwarzSekundärfarbe: Matt SchwarzPerleffekt: Dunkles RotReifenqualm: /', 
+            'tokio manji vip': 'Primärfarbe: Pures GoldSekundär: Pures GoldPerleffekt: RenngelbReifenqualm: ./.Unterboden: ./.', 
+            'alex lang vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
+            'emma nackendick vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
+            'emir pearce vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
+            'karlson tonic vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
+            'luan schoko shakur vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
+            'norbert nackendick vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
+            'sarah tonic vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
+            'vargo azrail vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
+            'kylo sanymaaa vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
+            'ricardo rwena vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
+            'fib vip': 'Codewort: Durchreise <br> Es wird nicht nach dem Ausweis gefragt! (erst ab DN 90) (Ausnahme: DN 99) <br> Um die DN festzustellen Frage einfach:"Wie lange bist du schon auf Durchreise" <br> Die Ränge Recruit, Trainee und Junior Agent tunen Dienstfahrzeuge kostenlos', 
+            'md vip': 'Primär: #ffffff <br> Sekundär: #ffffff <br> Perlerffekt: Nichts (Schwarz) <br> Keine Troll Felgen und keine Fenstertönung <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos', 
+            'md vip spezial unit': 'Primär: HEX: #008c7d <br> Sekundär: HEX: #008c7d <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos', 
+            'pd vip': 'Primärfarbe: Öl Schwarz <br> Sekundärfarbe: Öl Schwarz <br> Perleffekt: Öl Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
+            'pd cid vip': 'Primärfarbe: Matt Schwarz(Schwarz) <br> Sekundärfarbe: --- <br> Perleffekt: Pures Weiß(Weiss) <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos,', 
+            'pd gtf vip': 'Primärfarbe: Schwarz <br> Sekundärfarbe: Schwarz <br> Perleffekt: Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
+            'pd jugular vip': 'Primärfarbe: Amethyst (Lila) <br> Sekundärfarbe: ./. <br> Perleffekt: Diamantenblau mit Sticker: Fukura <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
+            'pd jugulargtf vip': 'Primärfarbe: Amethyst (Lila) <br> Sekundärfarbe: ./. <br> Perleffekt: Diamantenblau mit Sticker: Terroil <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
+            'pd s.p.f.u vip': 'Primärfarbe: Carbon (Schwarz) <br> Sekundärfarbe: Carbon (Schwarz) <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
+            'pd swat vip': 'Primärfarbe: Nickel <br> Sekundärfarbe: ./. <br> Perleffekt: Alabaster Weiß mit Sticker: PD <br> Reifenqualm: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
+            'pd unmarked vip': 'Primärfarbe: Carbon-Schwarz <br> Sekundärfarbe: / <br> Perleffekt: Matt Weiß <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
+            'sd vip doa': 'Primärfarbe: Alabaster Weiß <br> Sekundärfarbe: Alabaster Weiß <br> Perleffekt: Creme <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
+            'sd vip einsatz': 'Primärfarbe: Mattes Laubgrün <br> Sekundärfarbe: Mattes Laubgrün <br> Perleffekt: Army Grün <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
+            'sd vip jugular': 'Primärfarbe: Mattes Laubgrün <br> Sekundärfarbe: Weiß <br> Perleffekt: Rot, Sticker: Jakeys <br> Info: Die Ränge Praktikant, Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
+            'sd vip noose': 'Primärfarbe: Schwarz <br> Sekundärfarbe: Schwarz <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos',
+            'sd vip unmarked': 'Primärfarbe: Carbenat Rot <br> Sekundärfarbe: --- <br> Perleffekt: Brilliant Rot <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
+            'us marshals vip': 'Primärfarbe: Jagt Grün <br> Sekundärfarbe: Jagt Grün <br> Perleffekt: Jagt Grün <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos', 
+            'us marshals unmarked vip': 'Primärfarbe: #37373b <br> Sekundärfarbe: #37373b <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos', 
+            'unicorn': 'Primärfarbe: Elektrisches Blau <br> Sekundärfarbe: ./. <br> Perleffekt: Elektrisches Pink <br> Reifenqualm: ./.', 
+            'bennys': 'Primärfarbe: Matt Schwarz Sekundärfarbe: Matt SchwarzPerleffekt: Zitrus GrünReifenqualm: Lime GreenUnterboden: Lime Green',  
+            'blancos': 'Primärfarbe: ChromSekundärfarbe: ChromPerleffekt: Kaugummi BlauUnterboden: Light BlueHeadlights: Hellblau', 
+            'nameless': 'Primärfarbe: Graue NachtSekundärfarbe: Graue NachtPerleffekt: HimmelblauReifenqualm: /Unterboden: /', 
+            'quartier nord': 'Primärfarbe: RotSekundärfarbe: RotPerleffekt: Alabaster WeißReifenqualm: ./.Unterboden: ./.', 
+            'angels of death mc': 'Primärfarbe: Carbenat RotSekundärfarbe: Carbenat RotPerleffekt: DunkelblauReifenqualm: ./.Unterboden: ./.', 
+            'outlaw mc': 'Primärfarbe: Matt WeißSekundärfarbe: .Matt Weiß.Perleffekt: Torino RotReifenqualm: ./.Unterboden: ./.', 
+            'hellborn mc': '', 
+            'mg13': 'Primärfarbe: Kaugummi BlauSekundärfarbe: Kaugummi BlauPerleffekt: Helles GoldReifenqualm: ./.Unterboden: ./.', 
+            'vagos': 'Primärfarbe: RenngelbSekundärfarbe: RenngelbPerleffekt: Alabaster WeißReifenqualm: GelbUnterboden: Gelb' 
+            
+
+            // Hier kannst du weitere Zuordnungen und Infos hinzufügen
+        };
+
+        function updateZuordnungInfo() {
+            const selectedValue = zuordnungSelectElement.value.toLowerCase();
+            if (optionInfo[selectedValue]) {
+                infoBox.innerHTML = optionInfo[selectedValue];
+                infoBox.style.display = 'block';
+            } else {
+                infoBox.style.display = 'none';
+            }
+        }
+
+        // Bei Änderung des Dropdowns Info-Box aktualisieren und Preis neu berechnen
+        zuordnungSelectElement.addEventListener('change', () => {
+            updateZuordnungInfo();
+            updatePrice();
+        });
+
+        // Initial beim Laden der Seite
+        updateZuordnungInfo();
+    }
+
     // DOM-Elemente
     const mainOptions = document.querySelectorAll('.main-option');
     const priceDisplay = document.getElementById('total-price');
@@ -371,6 +460,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             });
+            const infoBox = document.getElementById('zuordnungInfo');
+            if (infoBox) {
+                infoBox.style.display = 'none';
+ // Oder falls du eine Standardnachricht setzen willst: infoBox.innerHTML = 'Wähle eine Option';
+            }
 
             const zuordnungSelect = document.getElementById('zuordnungSelect');
             if (zuordnungSelect) {
