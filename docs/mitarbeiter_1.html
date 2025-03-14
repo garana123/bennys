@@ -15,6 +15,18 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <link rel="stylesheet" href="mitarbeiter_log-in.css">
     <link rel="stylesheet" href="mitarbeiter_1.css">
+    <script>
+    // Prüfen, ob der Nutzer eingeloggt ist
+    if (sessionStorage.getItem("loggedin") !== "true") {
+        window.location.href = "mitarbeiter_log-in.html"; // Umleitung zur Login-Seite
+    }
+
+    function logout() {
+        sessionStorage.removeItem("loggedin"); 
+        sessionStorage.removeItem("user"); 
+        window.location.href = "mitarbeiter_log-in.html"; // Zurück zur Login-Seite
+    }
+  </script>
 </head>
 <body>
     <!-- In mitarbeiter_1.html direkt nach <body> -->
