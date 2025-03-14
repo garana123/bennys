@@ -417,3 +417,17 @@ select:disabled {
 .fett {
     font-weight: bold;
 }
+
+.info-box {
+    display: none; /* Standardmäßig ausgeblendet; via Script einblenden */
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 96.5%;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: bold;
+}
