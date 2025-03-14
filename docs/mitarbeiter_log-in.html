@@ -34,6 +34,8 @@
             const passwort = document.getElementById('passwort').value;
 
             if (validCredentials[dienstnummer] && validCredentials[dienstnummer].password === passwort) {
+                sessionStorage.setItem("loggedin", "true");
+                sessionStorage.setItem("user", dienstnummer);
                 window.location.href = validCredentials[dienstnummer].page;
             } else {
                 alert("Falsche Dienstnummer oder Passwort!");
