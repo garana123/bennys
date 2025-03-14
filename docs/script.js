@@ -475,6 +475,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const zuordnungSelect = $('#zuordnungSelect');
     const zuordnungValue = zuordnungSelect.val();
     const zuordnungText = zuordnungSelect.find("option:selected").text();
+    const filteredZuordnungText = zuordnungText.replace(/[^\p{L}\s]/gu, '');
 
     console.log("Debug: Dropdown 'zuordnungSelect' value:", zuordnungValue);
 
@@ -509,7 +510,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const dienstnummerText = dienstnummerValue ?  `-- Dienstnummer: ${dienstnummerValue}` : "";
 
     // Zusammensetzen der Nachricht:
-    const message = `${workerNumber} -- ${customerName} | ${finalPrice} | ${zuordnungText}${dienstnummerText}${voucherText}`;
+    const message = `${workerNumber} -- ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}${voucherText}`;
 
     // Nachricht via Discord-Webhook senden
     fetch("https://discord.com/api/webhooks/1349703966778196061/BFOfY-Ry33R9p3_EaNuKFS25mmQQXQ7KVT_TSuQcpvU7mvSEQcEsdgnI98B0DyyxcBVB", {
