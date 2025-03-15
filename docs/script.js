@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'gutschein1': {
             '1': {
                 disable: {
-                    elements: ['#fulltune'],
+                    elements: ['#fulltune','#bremsen','#getriebe','#motor','#turbo','#federung','#panzerung'],
                     condition: (mainIndex) => mainIndex === 0
                 }
             },
             '2': {
                 disable: {
-                    elements: ['#fulltune'],
+                    elements: ['#fulltune','#bremsen','#getriebe','#motor','#turbo','#federung','#panzerung'],
                     condition: (mainIndex) => mainIndex === 1
                 }
             },
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     condition: () => true
                 }
             },
-            '4': {
+            '7': {
                 disable: {
                     elements: ['#nummernschild', '#customkennzeichen'],
                     condition: () => true
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             '5': {
                 disable: {
-                    elements: ['#reifenfarbe', '#reifenqualm'],
+                    elements: ['#reifenfarbe', '#reifenqualm','#fenstertoenung'],
                     condition: () => true
                 },
                 additionalActions: () => {
@@ -175,23 +175,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     condition: () => true
                 }
             },
-            '7': {
+            '4': {
                 disable: {
-                    elements: ['#fenstertoenung'],
+                    elements: ['#unterboden'],
                     condition: () => true
+                },
+                additionalActions: () => {
+                    const felgen = document.querySelector('#headlights');
+                    if (headlights) headlights.value = '0';
                 }
             }
         },
         'gutschein2': {
             '1': {
                 disable: {
-                    elements: ['#fulltune'],
+                    elements: ['#fulltune','#bremsen','#getriebe','#motor','#turbo','#federung','#panzerung'],
                     condition: (mainIndex) => mainIndex === 0
                 }
             },
             '2': {
                 disable: {
-                    elements: ['#fulltune'],
+                    elements: ['#fulltune','#bremsen','#getriebe','#motor','#turbo','#federung','#panzerung'],
                     condition: (mainIndex) => mainIndex === 1
                 }
             },
@@ -201,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     condition: () => true
                 }
             },
-            '4': {
+            '7': {
                 disable: {
                     elements: ['#nummernschild', '#customkennzeichen'],
                     condition: () => true
@@ -209,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             '5': {
                 disable: {
-                    elements: ['#reifenfarbe', '#reifenqualm'],
+                    elements: ['#reifenfarbe', '#reifenqualm','#fenstertoenung'],
                     condition: () => true
                 },
                 additionalActions: () => {
@@ -223,10 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     condition: () => true
                 }
             },
-            '7': {
+            '4': {
                 disable: {
-                    elements: ['#fenstertoenung'],
+                    elements: ['#unterboden'],
                     condition: () => true
+                },
+                additionalActions: () => {
+                    const felgen = document.querySelector('#headlights');
+                    if (headlights) headlights.value = '0';
                 }
             }
         }
