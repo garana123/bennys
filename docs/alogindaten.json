@@ -3,6 +3,10 @@
         "passwordHash": "be6562f43e805a1eea890801d13ed11046dfc57a090c458566d80f0fd1421db8", 
         "version": 1
      },
+    "07": { 
+        "passwordHash": "615b3998288021c289aa44b115dca9a904e953715ec8e75964ab8c420b7483b8", 
+        "version": 1
+     },
     "10": { 
         "passwordHash": "f7d5e8c0f3349a5338273fd023113087", 
         "version": 1
