@@ -11,6 +11,10 @@
         "passwordHash": "c3f66fa3a76306398d732e3490bea57dbdf1d4cc7570b1eb78072ee49a4a67bc", 
         "version": 1
      },
+    "06": { 
+        "passwordHash": "675fc69c860d25e14fcf1889b9f2728db8c9215fcf3166cecd51b54cf7453348", 
+        "version": 1
+     },
     "07": { 
         "passwordHash": "615b3998288021c289aa44b115dca9a904e953715ec8e75964ab8c420b7483b8", 
         "version": 1
