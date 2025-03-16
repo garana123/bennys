@@ -1,21 +1,13 @@
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch('template.html')  // Pfad zum Template
-            .then(response => response.text())
-            .then(template => {
-                // Ersetze Platzhalter im Template
-                const dienstnummer = localStorage.getItem('dienstnummer') || 'Unbekannt';
-                
-    
-                // Füge das Template in die Seite ein
-                document.body.innerHTML = template;
-
-                const dienstnummerPlaceholder = document.getElementById('dienstnummer-placeholder');
-                if (dienstnummerPlaceholder) {
-                    dienstnummerPlaceholder.textContent = dienstnummer; // Setze die Dienstnummer
-                }
-            })
-            
-            .catch(err => console.error("Fehler beim Laden des Templates:", err));
-    });
-    </script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('template.html')
+        .then(response => response.text())
+        .then(template => {
+            // Ersetzt das gesamte Dokument mit dem geladenen Template
+            document.open();
+            document.write(template);
+            document.close();
+        })
+        .catch(err => console.error("Fehler beim Laden des Templates:", err));
+});
+</script>
