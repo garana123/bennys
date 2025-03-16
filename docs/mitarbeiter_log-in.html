@@ -24,7 +24,7 @@
     <script>
         async function loadCredentials() {
             try {
-                const response = await fetch(`logindaten.json?t=${new Date().getTime()}`);
+                const response = await fetch(`alogindaten.json?t=${new Date().getTime()}`);
                 return await response.json();
             } catch (error) {
                 console.error("Fehler beim Laden der Login-Daten:", error);
