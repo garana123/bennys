@@ -24,34 +24,42 @@
     <script>
         async function loadCredentials() {
             try {
-                const response = await fetch(`logindaten.json?t=${new Date().getTime()}`); // Zufälliger Parameter verhindert Caching
+                const response = await fetch(`logindaten.json?t=${new Date().getTime()}`);
                 return await response.json();
             } catch (error) {
                 console.error("Fehler beim Laden der Login-Daten:", error);
                 return {};
             }
         }
-
-        
-        
-
+    
+        // Funktion, um ein Passwort asynchron mit SHA-256 zu hashen
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+    
         document.getElementById('loginForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const dienstnummer = document.getElementById('dienstnummer').value;
             const passwort = document.getElementById('passwort').value;
-
+    
             const validCredentials = await loadCredentials();
-
             const user = validCredentials[dienstnummer];
+            
             if (user) {
-                const hashedPassword = CryptoJS.MD5(passwort).toString(); // SHA-256 Hash des eingegebenen Passworts
+                // SHA-256 Hash des eingegebenen Passworts
+                const hashedPassword = await hashPassword(passwort);
+                
                 if (hashedPassword === user.passwordHash) {
                     sessionStorage.setItem("loggedin", "true");
                     sessionStorage.setItem("user", dienstnummer);
-                    localStorage.setItem("passwordVersion", user.version); // Speichern der Passwort-Version
+                    localStorage.setItem("passwordVersion", user.version);
                     localStorage.setItem("loggedin", "true");
-
                     localStorage.setItem("dienstnummer", dienstnummer);
                     
                     window.location.href = `mitarbeiter_${dienstnummer}.html`;
@@ -62,21 +70,21 @@
                 alert("Falsche Dienstnummer oder Passwort!");
             }
         });
-
+    
         async function checkPasswordVersion() {
             const validCredentials = await loadCredentials();
             const dienstnummer = sessionStorage.getItem("user");
             if (!dienstnummer) return;
-
+    
             const savedVersion = localStorage.getItem("passwordVersion");
             const currentVersion = validCredentials[dienstnummer]?.version;
-
+    
             console.log("Gespeicherte Version:", savedVersion);
             console.log("Aktuelle Version:", currentVersion);
-
-    // Falls eine Version fehlt, überspringe den Logout
+    
+            // Falls eine Version fehlt, überspringe den Logout
             if (!savedVersion || !currentVersion) return;
-
+    
             if (savedVersion !== currentVersion) {
                 alert("Passwort wurde geändert! Du wirst ausgeloggt.");
                 sessionStorage.removeItem("loggedin");
@@ -85,11 +93,11 @@
                 window.location.href = "mitarbeiter_log-in.html";
             }
         }
-
+    
         if (sessionStorage.getItem("loggedin") && window.location.pathname !== "/mitarbeiter_log-in.html") {
-        checkPasswordVersion();
+            checkPasswordVersion();
         }
     </script>
+    
 </body>
 </html>
-
