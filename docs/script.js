@@ -624,3 +624,14 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     .then(data => console.log("Erfolg:", data))
     .catch(error => console.error("Fehler:", error));
 });
+
+window.onload = function() {
+    const dienstnummer = localStorage.getItem("dienstnummer"); // Auslesen der Dienstnummer
+
+    if (dienstnummer) {
+        // Ersetzen des Platzhalters mit der Dienstnummer
+        document.querySelector('.dienstnummer-info').innerHTML = `Dienstnummer des Arbeiters: ${dienstnummer}`;
+    } else {
+        console.error("Dienstnummer nicht gefunden.");
+    }
+};
