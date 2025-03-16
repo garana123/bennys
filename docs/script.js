@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'onepieceug vip': 'Primärfarbe: Mattschwarz <br> Sekundärfarbe: / <br> Perleffekt: Helles Gold',
             'pe$o vip': 'Primärfarbe: #797582 <br> Sekundärfarbe: #797582 <br> Perleffekt: Schwarz (Nichts) <br> Reifenqualm: ./.',
             'pe$o ug vip': 'Primärfarbe: #260000 <br> Sekundärfarbe: ./. <br> Perleffekt: SchwarzR <br> eifenqualm: ./.',
-            'rezero vip': 'Primärfarbe: Mystisches Lila <br> Sekundärfarbe: ./. <br> Perleffekt: Lila Metallic <br> Reifenqualm: ./.',
+            'rezero': 'Primärfarbe: Mystisches Lila <br> Sekundärfarbe: ./. <br> Perleffekt: Lila Metallic <br> Reifenqualm: ./.',
             'rezeroug vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: Dunkles Rot <br> Reifenqualm: /', 
             'tokio manji vip': 'Primärfarbe: Pures Gold <br> Sekundär: Pures Gold <br> Perleffekt: Renngelb <br> Reifenqualm: ./. <br> Unterboden: ./.', 
             'alex lang vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
