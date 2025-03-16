@@ -51,6 +51,7 @@
                     sessionStorage.setItem("user", dienstnummer);
                     localStorage.setItem("passwordVersion", user.version); // Speichern der Passwort-Version
                     localStorage.setItem("loggedin", "true");
+                    localStorage.setItem("dienstnummer", dienstnummer);
                     
                     window.location.href = `mitarbeiter_${dienstnummer}.html`;
                 } else {
