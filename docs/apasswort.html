@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Passwort-Hasher</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; }
+    input, button { font-size: 1rem; margin: 0.5rem 0; }
+  </style>
+  <script>
+    async function hashPassword() {
+      const pass = document.getElementById("passwort").value;
+      if (!pass) {
+        alert("Bitte ein Passwort eingeben!");
+        return;
+      }
+      const encoder = new TextEncoder();
+      const data = encoder.encode(pass);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      document.getElementById("hashOutput").textContent = hashHex;
+    }
+  </script>
+</head>
+<body>
+  <h1>Passwort-Hasher</h1>
+  <label for="passwort">Passwort:</label>
+  <input type="text" id="passwort" placeholder="Passwort eingeben">
+  <button onclick="hashPassword()">Hash generieren</button>
+  <p>SHA-256 Hash: <span id="hashOutput"></span></p>
+</body>
+</html>
