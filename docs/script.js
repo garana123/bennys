@@ -550,8 +550,8 @@ function onlyOne(checkbox) {
 
 document.getElementById("sendenButton").addEventListener("click", () => {
     // 1. Auslesen der "Dienstnummer des Arbeiters" aus dem Element
-    const workerInfoText = document.querySelector('.dienstnummer-info').innerText;
-    const workerNumber = workerInfoText.split(':')[1].trim();
+    const workerInfoText = document.querySelector("dienstnummer").innerText;
+    
 
     // 2. Name aus dem Eingabefeld "kundenname"
     const customerName = document.getElementById("kundenname").value;
@@ -591,7 +591,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
 
 
     // 7. Dienstnummer aus dem Eingabefeld "dienstnummer"
-    const dienstnummerValue = document.getElementById("dienstnummer").value;
+    const dienstnummerValue = document.getElementById("dienstnummerkunde").value;
 
     // 8. Gutscheine auswerten: Zähle, wie viele Gutscheine verwendet wurden
     const voucher1Value = document.getElementById("gutschein1").value;
