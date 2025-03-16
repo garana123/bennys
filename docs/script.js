@@ -551,6 +551,8 @@ function onlyOne(checkbox) {
 document.getElementById("sendenButton").addEventListener("click", () => {
     // 1. Auslesen der "Dienstnummer des Arbeiters" aus dem Element
     const workerInfoText = document.querySelector("dienstnummer").innerText;
+    const workerNumber = workerInfoText || "Unbekannt"; // Fallback-Wert setzen
+
     
 
     // 2. Name aus dem Eingabefeld "kundenname"
