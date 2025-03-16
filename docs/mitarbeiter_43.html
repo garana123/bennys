@@ -1,0 +1,13 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('atemplate.html')
+        .then(response => response.text())
+        .then(template => {
+            // Ersetzt das gesamte Dokument mit dem geladenen Template
+            document.open();
+            document.write(template);
+            document.close();
+        })
+        .catch(err => console.error("Fehler beim Laden des Templates:", err));
+});
+</script>
