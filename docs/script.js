@@ -601,13 +601,13 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     }
 
     // Gutschein-Text nur hinzufügen, wenn ein Gutschein verwendet wurde
-    const voucherText = voucherCount > 0 ?  `-- Gutschein: [${voucherCount}]` : "";
+    const voucherText = voucherCount > 0 ?  ` -- Gutschein: [${voucherCount}]` : "";
 
     // Dienstnummer nur hinzufügen, wenn sie nicht leer ist
-    const dienstnummerText = dienstnummerValue ?  `-- Dienstnummer: ${dienstnummerValue}` : "";
+    const dienstnummerText = dienstnummerValue ?  ` -- Dienstnummer: ${dienstnummerValue}` : "";
 
     // Zusammensetzen der Nachricht:
-    const message = `${workerNumber} -- ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}${voucherText}`;
+    const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}${voucherText}`;
 
     // Nachricht via Discord-Webhook senden
     fetch("https://discord.com/api/webhooks/1350909051487260702/UpVJL6dMmBcUs-W-tyB9RxF8wGtNYQKIPltMqGYSdafMLJ7A4gA7FH0w-wIEO23o9Yfe", {
