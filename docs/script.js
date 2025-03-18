@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'nameless': 'Primärfarbe: Graue Nacht <br> Sekundärfarbe: Graue Nacht <br> Perleffekt: Himmelblau <br> Reifenqualm: / <br> Unterboden: /', 
             'quartier nord': 'Primärfarbe: Rot <br> Sekundärfarbe: Rot <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: ./. <br> Unterboden: ./.',  
             'hellborn mc': 'Primär: Matt Schwarz <br> Sekundär: Matt Schwarz <br> Perleffekt: Matt Orange',
-            'vagos': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb' 
+            'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb' 
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
