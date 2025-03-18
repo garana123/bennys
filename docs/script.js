@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'us marshals vip': 'Primärfarbe: Jagt Grün <br> Sekundärfarbe: Jagt Grün <br> Perleffekt: Jagt Grün <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos',
             'ice company vip': 'Primärfarbe: Diamantblau <br> Sekundärfarbe: Kaugummi Blau <br> Perleffekt: Alabaster weiß <br> Reifenqualm: ./.',
             'kizuna vip': 'Primärfarbe: Dunkle Erde (Braun) <br> Sekundärfarbe: Dunkle Erde (Braun) <br> Perleffekt: Creme Weiß <br> Reifenqualm: ./. <br> Info: /',
-            'la mano azura mc vip': 'Primärfarbe: Azure ( Blau ) <br> Sekundärfarbe: Azure ( Blau ) <br> Perleffekt: Albasterweiß <br> Reifenqualm: / <br> Unterboden: /', 
+            'la mano azura mc': 'Primärfarbe: Azure ( Blau ) <br> Sekundärfarbe: Azure ( Blau ) <br> Perleffekt: Albasterweiß <br> Reifenqualm: / <br> Unterboden: /', 
             'money over bitches (mob) vip': 'Primärfarbe: Topaz (blau) <br> Sekundärfarbe: Topaz (blau) <br> Perleffekt: Limonengrün <br> Reifenqualm: ./.', 
             'money over bitches (mob) ug vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Rasengrün <br> Perleffekt: Rasengrün <br> Reifenqualm: ./.', 
             'onepiece vip': 'Primärfarbe: Hex: #aeb6bf <br> Sekundärfarbe: Hex: #aeb6bf <br> Perleffekt: 7. Reihe, das vierte (Helles Gold) <br> Reifenqualm: ./.',
