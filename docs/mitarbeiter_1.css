@@ -1,5 +1,9 @@
 body {
     background-color: #000;
+    background-image: url('hintergrundbild.jpg'); /* Passe den Dateinamen an */
+    background-size: cover; /* Skaliert das Bild, sodass es den ganzen Bildschirm bedeckt */
+    background-position: center; /* Zentriert das Bild */
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
