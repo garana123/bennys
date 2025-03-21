@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'sd vip noose': 'Primärfarbe: Schwarz <br> Sekundärfarbe: Schwarz <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos',
             'sd vip unmarked': 'Primärfarbe: Carbenat Rot <br> Sekundärfarbe: --- <br> Perleffekt: Brilliant Rot <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
             'us marshals vip': 'Primärfarbe: Jagt Grün <br> Sekundärfarbe: Jagt Grün <br> Perleffekt: Jagt Grün <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos', 
-            'us marshals unmarked vip': 'Primärfarbe: #37373b <br> Sekundärfarbe: #37373b <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos', 
+            'us marshals unmarked vip': 'Primärfarbe: Indigo lila <br> Sekundärfarbe: Indigo lila <br> Perlerffekt: Helles Orange <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos', 
             'unicorn': 'Primärfarbe: Elektrisches Blau <br> Sekundärfarbe: ./. <br> Perleffekt: Elektrisches Pink <br> Reifenqualm: ./.', 
             'bennys': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: Zitrus Grün <br> Reifenqualm: Lime Green <br> Unterboden: Lime Green',  
             'nameless': 'Primärfarbe: Graue Nacht <br> Sekundärfarbe: Graue Nacht <br> Perleffekt: Himmelblau <br> Reifenqualm: / <br> Unterboden: /', 
