@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'pd swat vip': 'Primärfarbe: Nickel <br> Sekundärfarbe: ./. <br> Perleffekt: Alabaster Weiß mit Sticker: PD <br> Reifenqualm: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
             'pd unmarked vip': 'Primärfarbe: Carbon-Schwarz <br> Sekundärfarbe: / <br> Perleffekt: Matt Weiß <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
             'sd vip doa': 'Primärfarbe: Alabaster Weiß <br> Sekundärfarbe: Alabaster Weiß <br> Perleffekt: Creme <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
-            'sd vip einsatz': 'Primärfarbe: Mattes Laubgrün <br> Sekundärfarbe: Mattes Laubgrün <br> Perleffekt: Army Grün <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
+            'sd vip einsatz': 'Primärfarbe: Sandbraun <br> Sekundärfarbe: - <br> Perleffekt: Orange <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
             'sd vip jugular': 'Primärfarbe: Mattes Laubgrün <br> Sekundärfarbe: Weiß <br> Perleffekt: Rot, Sticker: Jakeys <br> Info: Die Ränge Praktikant, Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
             'sd vip noose': 'Primärfarbe: Schwarz <br> Sekundärfarbe: Schwarz <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos',
             'sd vip unmarked': 'Primärfarbe: Carbenat Rot <br> Sekundärfarbe: --- <br> Perleffekt: Brilliant Rot <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos', 
