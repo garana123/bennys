@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'nameless ug': 'Primärfarbe: Dunkles Grau <br> Sekundärfarbe: Dunkles Grau <br> Perleffekt: Brilliant Rot <br> Reifenqualm: / <br> Unterboden: /',
             'quartier nord': 'Primärfarbe: Rot <br> Sekundärfarbe: Rot <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: ./. <br> Unterboden: ./.',  
             'hellborn mc': 'Primär: Matt Schwarz <br> Sekundär: Matt Schwarz <br> Perleffekt: Matt Orange',
+            'mg 13': 'Primär: Himmelblau <br> Sekundär: Himmelblau <br> Perleffekt: Alabaster Weiss',
             'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb' 
             
 
