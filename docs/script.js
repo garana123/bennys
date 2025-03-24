@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (zuordnungSelectElement) {
         const infoBox = document.getElementById('zuordnungInfo');
         const optionInfo = {
-            'bennys': 'Primär: Matt Schwarz <br> Sekundär: Matt Schwarz <br> Perleffekt: Zitrus Grün <br> Reifenqualm: Lime Green <br> Unterboden: Lime Green',
+            'bennys': 'Primär: Mystisches Violet <br> Sekundär: Mystisches Violet <br> Perleffekt: Amethyst <br> Reifenqualm: - <br> Unterboden: -',
             'fib vip': 'Codewort: Durchreise <br> Es wird nicht nach dem Ausweis gefragt! (erst ab DN 90) (Ausnahme: DN 99) <br> Um die DN festzustellen Frage einfach:"Wie lange bist du schon auf Durchreise" <br> Die Ränge Recruit, Trainee und Junior Agent tunen Dienstfahrzeuge kostenlos',
             'md vip': 'Primär: #ffffff <br> Sekundär: #ffffff <br> Perlerffekt: Nichts (Schwarz) <br> Keine Troll Felgen und keine Fenstertönung <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
             'md vip spezial unit': 'Primär: HEX: #008c7d <br> Sekundär: HEX: #008c7d <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
