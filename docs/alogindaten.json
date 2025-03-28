@@ -9,15 +9,15 @@
      },
     "03": { 
         "passwordHash": "e385e7294d14ec72b964a7c79a78ee1c19ebd657652926c81354175aaf911786", 
-        "version": 3
+        "version": 1
      },
     "04": { 
         "passwordHash": "e385e7294d14ec72b964a7c79a78ee1c19ebd657652926c81354175aaf911786", 
-        "version": 4
+        "version": 1
      },
     "05": { 
         "passwordHash": "be327bd578f640087ef86de033eed2c2b15b7eca6525acfa207e9d99d8734bc5", 
-        "version": 3
+        "version": 1
      },
     "06": { 
         "passwordHash": "675fc69c860d25e14fcf1889b9f2728db8c9215fcf3166cecd51b54cf7453348", 
@@ -25,7 +25,7 @@
      },
     "07": { 
         "passwordHash": "f72b9f4868b099efbcfe59b91347d28c12ffecc8ec2b5008e8790d79be3a7608", 
-        "version": 2
+        "version": 1
      },
     "08": { 
         "passwordHash": "be327bd578f640087ef86de033eed2c2b15b7eca6525acfa207e9d99d8734bc5", 
