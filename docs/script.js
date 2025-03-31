@@ -288,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'unicorn': 'Primärfarbe: Elektrisches Blau <br> Sekundärfarbe: ./. <br> Perleffekt: Elektrisches Pink <br> Reifenqualm: ./.',   
             'nameless vip': 'Primärfarbe: Helles Orange <br> Sekundärfarbe: - <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: / <br> Unterboden: /', 
             'nameless ug vip': 'Primärfarbe: Dunkles Grau <br> Sekundärfarbe: Dunkles Grau <br> Perleffekt: Brilliant Rot <br> Reifenqualm: / <br> Unterboden: /',
-            'hellborn mc': 'Primär: Matt Schwarz <br> Sekundär: Matt Schwarz <br> Perleffekt: Matt Orange',
             'mg 13': 'Primär: Himmelblau <br> Sekundär: Himmelblau <br> Perleffekt: Alabaster Weiss',
             'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb' 
             
