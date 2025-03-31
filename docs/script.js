@@ -252,10 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'sd vip': 'Primärfarbe: Creme (Weiß) <br> Sekundärfarbe: - <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos',
             'us marshals vip': 'Primärfarbe: Jagt Grün <br> Sekundärfarbe: Jagt Grün <br> Perleffekt: Jagt Grün <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos',
             'ice company vip': 'Primärfarbe: Diamantblau <br> Sekundärfarbe: Kaugummi Blau <br> Perleffekt: Alabaster weiß <br> Reifenqualm: ./.',
-            'kizuna vip': 'Primärfarbe: Dunkle Erde (Braun) <br> Sekundärfarbe: Dunkle Erde (Braun) <br> Perleffekt: Creme Weiß <br> Reifenqualm: ./. <br> Info: /',
             'la mano azura mc': 'Primärfarbe: Azure ( Blau ) <br> Sekundärfarbe: Azure ( Blau ) <br> Perleffekt: Albasterweiß <br> Reifenqualm: / <br> Unterboden: /', 
-            'money over bitches (mob) vip': 'Primärfarbe: Topaz (blau) <br> Sekundärfarbe: Topaz (blau) <br> Perleffekt: Limonengrün <br> Reifenqualm: ./.', 
-            'money over bitches (mob) ug vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Rasengrün <br> Perleffekt: Rasengrün <br> Reifenqualm: ./.', 
             'onepiece vip': 'Primärfarbe: Hex: #aeb6bf <br> Sekundärfarbe: Hex: #aeb6bf <br> Perleffekt: 7. Reihe, das vierte (Helles Gold) <br> Reifenqualm: ./.',
             'onepieceug vip': 'Primärfarbe: Mattschwarz <br> Sekundärfarbe: / <br> Perleffekt: Helles Gold',
             'peso vip': 'Primärfarbe: #797582 <br> Sekundärfarbe: #797582 <br> Perleffekt: Schwarz (Nichts) <br> Reifenqualm: ./.',
@@ -291,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'unicorn': 'Primärfarbe: Elektrisches Blau <br> Sekundärfarbe: ./. <br> Perleffekt: Elektrisches Pink <br> Reifenqualm: ./.',   
             'nameless vip': 'Primärfarbe: Helles Orange <br> Sekundärfarbe: - <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: / <br> Unterboden: /', 
             'nameless ug vip': 'Primärfarbe: Dunkles Grau <br> Sekundärfarbe: Dunkles Grau <br> Perleffekt: Brilliant Rot <br> Reifenqualm: / <br> Unterboden: /',
-            'quartier nord': 'Primärfarbe: Rot <br> Sekundärfarbe: Rot <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: ./. <br> Unterboden: ./.',  
             'hellborn mc': 'Primär: Matt Schwarz <br> Sekundär: Matt Schwarz <br> Perleffekt: Matt Orange',
             'mg 13': 'Primär: Himmelblau <br> Sekundär: Himmelblau <br> Perleffekt: Alabaster Weiss',
             'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb' 
