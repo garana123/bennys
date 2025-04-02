@@ -294,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb',
             'blue lock': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Verbotenes Blau',
             'scandinavian tribe': 'Primär: Metallic Blau <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
+            'la casa nera': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Dunkles Rot',
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
