@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'nameless ug vip': 'Primärfarbe: Dunkles Grau <br> Sekundärfarbe: Dunkles Grau <br> Perleffekt: Brilliant Rot <br> Reifenqualm: / <br> Unterboden: /',
             'mg 13': 'Primär: Himmelblau <br> Sekundär: Himmelblau <br> Perleffekt: Alabaster Weiss',
             'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb',
-            'blue lock': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Verbotenes Blau',
+            'blue lock': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Surfer Blau',
             'scandinavian tribe': 'Primär: Metallic Blau <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
             'la casa nera': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Dunkles Rot',
             
