@@ -293,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'mg 13': 'Primär: Himmelblau <br> Sekundär: Himmelblau <br> Perleffekt: Alabaster Weiss',
             'vagos vip': 'Primärfarbe: Renngelb <br> Sekundärfarbe: Renngelb <br> Perleffekt: Alabaster Weiß <br> Reifenqualm: Gelb <br> Unterboden: Gelb',
             'blue lock': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Verbotenes Blau',
+            'scandinavian tribe': 'Primär: Metallic Blau <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
