@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'felgen': {
             prices: [
                 [0, 0, 0, 0],
-                [75000, 75000, 75000, 300000],
-                [225000, 225000, 225000, 450000]
+                [25000, 25000, 25000, 25000],
+                [75000, 75000, 75000, 75000]
             ],
             selector: '#felgen',
             isDropdown: true
