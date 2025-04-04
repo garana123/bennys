@@ -295,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'blue lock': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Surfer Blau',
             'scandinavian tribe': 'Primär: Metallic Blau <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
             'la casa nera': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Dunkles Rot',
+            'street money murders': 'Primär: Lila Metallic <br> Sekundär: ./. <br> Perleffekt: Alabasterweiß',
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
