@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const infoBox = document.getElementById('zuordnungInfo');
         const optionInfo = {
             'bennys': 'Primär: Mystisches Violet <br> Sekundär: Mystisches Violet <br> Perleffekt: Amethyst <br> Reifenqualm: - <br> Unterboden: -',
-            'fib vip': 'Codewort: Hast du bitte ein Euro? <br> Es wird nicht nach dem Ausweis gefragt! (erst ab DN 90) (Ausnahme: DN 99) <br> Um die DN festzustellen Frage einfach:"Wie viele Euros brauchst du?" <br> Die Ränge Recruit, Trainee und Junior Agent tunen Dienstfahrzeuge kostenlos',
+            'fib vip': 'Codewort: Hast du bitte ein Euro? <br> Es wird nicht nach dem Ausweis gefragt! (erst ab DN 90) (Ausnahme: DN 99 & 304) <br> Um die DN festzustellen Frage einfach:"Wie viele Euros brauchst du?" <br> Die Ränge Recruit, Trainee und Junior Agent tunen Dienstfahrzeuge kostenlos',
             'md vip': 'Primär: #ffffff <br> Sekundär: #ffffff <br> Perlerffekt: Nichts (Schwarz) <br> Keine Troll Felgen und keine Fenstertönung <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
             'md vip spezial unit': 'Primär: HEX: #008c7d <br> Sekundär: HEX: #008c7d <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
             'pd vip': 'Primärfarbe: Öl Schwarz <br> Sekundärfarbe: Öl Schwarz <br> Perleffekt: Öl Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
@@ -272,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'vargo azrail vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
             'kylo sanymaaa vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
             'kean diaz vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
-            'theo adebayo vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
             'pd cid vip': 'Primärfarbe: Matt Schwarz(Schwarz) <br> Sekundärfarbe: --- <br> Perleffekt: Pures Weiß(Weiss) <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos,', 
             'pd gtf vip': 'Primärfarbe: Schwarz <br> Sekundärfarbe: Schwarz <br> Perleffekt: Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
             'pd jugular vip': 'Primärfarbe: Amethyst (Lila) <br> Sekundärfarbe: ./. <br> Perleffekt: Diamantenblau mit Sticker: Fukura <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos', 
