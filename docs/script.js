@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'peso vip': 'Primärfarbe: #797582 <br> Sekundärfarbe: #797582 <br> Perleffekt: Schwarz (Nichts) <br> Reifenqualm: ./.',
             'peso ug vip': 'Primärfarbe: #6b6b6a <br> Sekundärfarbe: #6b6b6a <br> Perleffekt: Himmelblau <br> eifenqualm: ./.', 
             'tokio manji vip': 'Primärfarbe: Pures Gold <br> Sekundär: Pures Gold <br> Perleffekt: Renngelb <br> Reifenqualm: ./. <br> Unterboden: ./.',
-            'blancos vip': 'Primärfarbe: Marmor Braun <br> Sekundärfarbe: Marmor Braun <br> Perleffekt: Creme Weiß <br> Unterboden: Light Blue <br> Headlights: Hellblau',
+            'blancos vip': 'Primärfarbe: Marmor Braun <br> Sekundärfarbe: Marmor Braun <br> Perleffekt: Creme Weiß',
             'blancos ug vip': 'Primärfarbe: Asphalt Grau <br> Sekundärfarbe: Asphalt Grau <br> Perleffekt: Cobalt Blau', 
             'sacra corona unita vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: Metallic Lila <br> Unterboden: Weiß',
             'alex lang vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
