@@ -293,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'la casa nera': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Dunkles Rot',
             'street money murders': 'Primär: Lila Metallic <br> Sekundär: ./. <br> Perleffekt: Alabasterweiß',
             'most wanted marocs mc': 'Primär: Cabernet Rot <br> Sekundär: ./. <br> Perleffekt: Limonengrün',
+            'red rose': 'Primär: #290000 <br> Sekundär: - <br> Perleffekt: 3. Reihe ganz rechts'
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
