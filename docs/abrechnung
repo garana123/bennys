@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrechnung</title>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: url('https://cdn-0001.qstv.on.epicgames.com/QYrxPyJYbpHiycSkxz/image/landscape_comp.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+    }
+
+    .daten {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .datensatz {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: transform 0.2s ease, background-color 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .datensatz:hover {
+        transform: scale(1.02);
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .werte {
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin: 0 5px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 2px solid #000;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-color: #444;
+    }
+
+    .action-button {
+        min-width: 120px;
+        background-color: #007bff;
+        color: rgb(255, 255, 255);
+        margin: 10px 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .action-button:hover {
+        background-color: #0056b3;
+    }
+
+    .reset-button {
+        background-color: #dc3545;
+        color: white;
+        margin: 10px 5px;
+        padding: 10px 20px;
+        min-width: 120px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .reset-button:hover {
+        background-color: #a71d2a;
+    }
+
+    .checkbox-group {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .checkbox-group label {
+        margin-right: 10px;
+    }
+
+    .zahl {
+        width: 50px;
+        text-align: center;
+    }
+
+    .summe {
+        margin-left: auto;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #scrollButton {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        min-width: 120px;
+    }
+
+    #scrollButton:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<script>
+    function updateValue(id, field, increment) {
+        const element = document.getElementById(`${id}-${field}`);
+        let value = parseInt(element.textContent);
+        value += increment;
+        if (value < 0) value = 0;
+        element.textContent = value;
+        updateSum(id);
+        checkExistiert(id);
+    }
+
+    function updateSum(id) {
+        const werbungen = parseInt(document.getElementById(`${id}-werbungen`).textContent);
+        const fruehschichten = parseInt(document.getElementById(`${id}-fruehschichten`).textContent);
+        const gutscheine = parseInt(document.getElementById(`${id}-gutscheine`).textContent);
+
+        const summe = (werbungen * 150000) + (fruehschichten * 100000) + (gutscheine * 50000);
+        document.getElementById(`${id}-summe`).textContent = summe.toLocaleString("de-DE") + " $";
+    }
+
+    function updateRowColor(id) {
+        const row = document.getElementById(`row-${id}`);
+        const existsCheckbox = document.getElementById(`${id}-existiert`);
+        const completedCheckbox = document.getElementById(`${id}-abgeschlossen`);
+
+        if (completedCheckbox.checked) {
+            row.style.backgroundColor = "rgba(0, 255, 0, 0.3)";
+        } else if (existsCheckbox.checked) {
+            row.style.backgroundColor = "rgba(255, 255, 0, 0.3)";
+        } else {
+            row.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+        }
+    }
+
+    function checkExistiert(id) {
+        const werbungen = parseInt(document.getElementById(`${id}-werbungen`).textContent);
+        const fruehschichten = parseInt(document.getElementById(`${id}-fruehschichten`).textContent);
+        const gutscheine = parseInt(document.getElementById(`${id}-gutscheine`).textContent);
+        const existsCheckbox = document.getElementById(`${id}-existiert`);
+        const completedCheckbox = document.getElementById(`${id}-abgeschlossen`);
+
+        if (werbungen > 0 || fruehschichten > 0 || gutscheine > 0) {
+            existsCheckbox.checked = true;
+        } else {
+            existsCheckbox.checked = false;
+            completedCheckbox.checked = false;
+        }
+        updateRowColor(id);
+    }
+
+    function resetPage() {
+        const values = document.querySelectorAll(".zahl");
+        values.forEach(value => value.textContent = "0");
+
+        const completedCheckboxes = document.querySelectorAll("input[id$='-abgeschlossen']");
+        completedCheckboxes.forEach(checkbox => checkbox.checked = false);
+
+        const existsCheckboxes = document.querySelectorAll("input[id$='-existiert']");
+        existsCheckboxes.forEach(checkbox => checkbox.checked = false);
+
+        const rows = document.querySelectorAll(".datensatz");
+        rows.forEach(row => {
+            row.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+        });
+
+        const summen = document.querySelectorAll(".summe");
+        summen.forEach(summe => summe.textContent = "0 $");
+
+        document.getElementById("suchfeld").value = "";
+        document.getElementById("filter-existiert").checked = false;
+        document.getElementById("filter-abgeschlossen").checked = false;
+        applyFilter();
+    }
+
+    function saveData() {
+        const data = {};
+        for (let i = 1; i <= 99; i++) {
+            const formattedNumber = i < 10 ? `0${i}` : i;
+            data[formattedNumber] = {
+                werbungen: parseInt(document.getElementById(`${formattedNumber}-werbungen`).textContent),
+                fruehschichten: parseInt(document.getElementById(`${formattedNumber}-fruehschichten`).textContent),
+                gutscheine: parseInt(document.getElementById(`${formattedNumber}-gutscheine`).textContent),
+                existiert: document.getElementById(`${formattedNumber}-existiert`).checked,
+                abgeschlossen: document.getElementById(`${formattedNumber}-abgeschlossen`).checked,
+            };
+        }
+        localStorage.setItem("abrechnungData", JSON.stringify(data));
+        alert("Daten wurden gespeichert.");
+    }
+
+    function loadData() {
+        const data = JSON.parse(localStorage.getItem("abrechnungData"));
+        if (!data) return;
+
+        for (let i = 1; i <= 99; i++) {
+            const formattedNumber = i < 10 ? `0${i}` : i;
+            if (data[formattedNumber]) {
+                const item = data[formattedNumber];
+                document.getElementById(`${formattedNumber}-werbungen`).textContent = item.werbungen;
+                document.getElementById(`${formattedNumber}-fruehschichten`).textContent = item.fruehschichten;
+                document.getElementById(`${formattedNumber}-gutscheine`).textContent = item.gutscheine;
+                document.getElementById(`${formattedNumber}-existiert`).checked = item.existiert;
+                document.getElementById(`${formattedNumber}-abgeschlossen`).checked = item.abgeschlossen;
+                updateRowColor(formattedNumber);
+                updateSum(formattedNumber);
+            }
+        }
+        applyFilter();
+    }
+
+    function dienstnummerSuchen() {
+        const nummer = document.getElementById("suchfeld").value.padStart(2, '0');
+        const ziel = document.getElementById("row-" + nummer);
+        if (ziel) {
+            ziel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const checkbox = document.getElementById(nummer + "-existiert");
+            checkbox.checked = true;
+            updateRowColor(nummer);
+            applyFilter();
+        } else {
+            alert("Dienstnummer " + nummer + " nicht gefunden.");
+        }
+    }
+
+    function handleEnterPress(event) {
+        if (event.key === 'Enter') {
+            dienstnummerSuchen();
+        }
+    }
+
+    function scrollToSearch() {
+        const searchField = document.getElementById('suchfeld');
+        searchField.value = '';
+        searchField.focus();
+        window.scrollTo({
+            top: searchField.offsetTop - 20,
+            behavior: 'smooth'
+        });
+    }
+
+    function applyFilter() {
+        const filterExistiert = document.getElementById("filter-existiert").checked;
+        const filterAbgeschlossen = document.getElementById("filter-abgeschlossen").checked;
+
+        for (let i = 1; i <= 99; i++) {
+            const id = i < 10 ? `0${i}` : i;
+            const row = document.getElementById(`row-${id}`);
+            const existiert = document.getElementById(`${id}-existiert`).checked;
+            const abgeschlossen = document.getElementById(`${id}-abgeschlossen`).checked;
+
+            let sichtbar = true;
+
+            if (filterExistiert && !existiert) sichtbar = false;
+            if (filterAbgeschlossen && !abgeschlossen) sichtbar = false;
+            if (!filterExistiert && !filterAbgeschlossen) sichtbar = true;
+
+            row.style.display = sichtbar ? "flex" : "none";
+        }
+    }
+</script>
+</head>
+<body onload="loadData()">
+    <div class="daten">
+        <button id="scrollButton" onclick="scrollToSearch()">Zur Suche</button>
+
+        <div style="margin-bottom: 20px;">
+            <label for="suchfeld"><strong>Dienstnummer suchen:</strong></label>
+            <input type="text" id="suchfeld" placeholder="01 bis 99" style="padding: 8px; font-size: 16px; width: 100px; margin-right: 10px;" onkeydown="handleEnterPress(event)">
+            <button onclick="dienstnummerSuchen()" class="action-button">Suchen</button>
+        </div>
+
+        <!-- 📌 Filter hinzugefügt -->
+        <div style="margin-bottom: 20px;">
+            <strong>Filter:</strong><br>
+            <label><input type="checkbox" id="filter-existiert" onchange="applyFilter()"> Existiert</label>
+            <label><input type="checkbox" id="filter-abgeschlossen" onchange="applyFilter()"> Abgeschlossen</label>
+        </div>
+
+        <h2>Abrechnung</h2>
+        <button class="action-button" onclick="saveData()">Speichern</button>
+        <button class="action-button" onclick="loadData()">Laden</button>
+        <button class="reset-button" onclick="resetPage()">Reset</button>
+
+        <script>
+            for (let i = 1; i <= 99; i++) {
+                const formattedNumber = i < 10 ? `0${i}` : i;
+                document.write(`
+                <div class="datensatz" id="row-${formattedNumber}">
+                    <strong>${formattedNumber}:</strong>
+                    <div class="werte">
+                        <span>Werbungen:</span>
+                        <button onclick="updateValue('${formattedNumber}', 'werbungen', -1)">-</button>
+                        <span id="${formattedNumber}-werbungen" class="zahl">0</span>
+                        <button onclick="updateValue('${formattedNumber}', 'werbungen', 1)">+</button>
+                    </div>
+                    <div class="werte">
+                        <span>Frühschichten:</span>
+                        <button onclick="updateValue('${formattedNumber}', 'fruehschichten', -1)">-</button>
+                        <span id="${formattedNumber}-fruehschichten" class="zahl">0</span>
+                        <button onclick="updateValue('${formattedNumber}', 'fruehschichten', 1)">+</button>
+                    </div>
+                    <div class="werte">
+                        <span>Gutscheine:</span>
+                        <button onclick="updateValue('${formattedNumber}', 'gutscheine', -1)">-</button>
+                        <span id="${formattedNumber}-gutscheine" class="zahl">0</span>
+                        <button onclick="updateValue('${formattedNumber}', 'gutscheine', 1)">+</button>
+                    </div>
+                    <span id="${formattedNumber}-summe" class="summe">0 $</span>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="${formattedNumber}-existiert" onclick="updateRowColor('${formattedNumber}')"> Existiert</label>
+                        <label><input type="checkbox" id="${formattedNumber}-abgeschlossen" onclick="updateRowColor('${formattedNumber}')"> Abgeschlossen</label>
+                    </div>
+                </div>
+                `);
+            }
+        </script>
+    </div>
+</body>
+</html>
