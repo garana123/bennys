@@ -143,6 +143,31 @@
     #scrollButton:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
+
+.copy-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #000;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.copy-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: #444;
+}
+h2 {
+    font-size: 36px;  /* Ändere dies auf die gewünschte Schriftgröße */
+    font-weight: bold; /* Optional, wenn du es fett haben möchtest */
+    text-align: center; /* Optional, wenn du es zentrieren möchtest */
+}
+
+
 </style>
 
 <script>
@@ -221,7 +246,7 @@
 
     function saveData() {
         const data = {};
-        for (let i = 1; i <= 99; i++) {
+        for (let i = 1; i <= 100; i++) {
             const formattedNumber = i < 10 ? `0${i}` : i;
             data[formattedNumber] = {
                 werbungen: parseInt(document.getElementById(`${formattedNumber}-werbungen`).textContent),
@@ -239,7 +264,7 @@
         const data = JSON.parse(localStorage.getItem("abrechnungData"));
         if (!data) return;
 
-        for (let i = 1; i <= 99; i++) {
+        for (let i = 1; i <=100; i++) {
             const formattedNumber = i < 10 ? `0${i}` : i;
             if (data[formattedNumber]) {
                 const item = data[formattedNumber];
@@ -285,25 +310,45 @@
         });
     }
 
-    function applyFilter() {
-        const filterExistiert = document.getElementById("filter-existiert").checked;
-        const filterAbgeschlossen = document.getElementById("filter-abgeschlossen").checked;
+function applyFilter() {
+    const filterExistiert = document.getElementById("filter-existiert").checked;
+    const filterAbgeschlossen = document.getElementById("filter-abgeschlossen").checked;
 
-        for (let i = 1; i <= 99; i++) {
-            const id = i < 10 ? `0${i}` : i;
-            const row = document.getElementById(`row-${id}`);
-            const existiert = document.getElementById(`${id}-existiert`).checked;
-            const abgeschlossen = document.getElementById(`${id}-abgeschlossen`).checked;
+    for (let i = 1; i <= 100; i++) {
+        const id = i < 10 ? `0${i}` : i;
+        const row = document.getElementById(`row-${id}`);
+        const existiert = document.getElementById(`${id}-existiert`).checked;
+        const abgeschlossen = document.getElementById(`${id}-abgeschlossen`).checked;
 
-            let sichtbar = true;
+        let sichtbar = true;
 
-            if (filterExistiert && !existiert) sichtbar = false;
-            if (filterAbgeschlossen && !abgeschlossen) sichtbar = false;
-            if (!filterExistiert && !filterAbgeschlossen) sichtbar = true;
+        if (filterExistiert && !filterAbgeschlossen) {
+            sichtbar = existiert && !abgeschlossen;
+        } else if (!filterExistiert && filterAbgeschlossen) {
+            sichtbar = abgeschlossen;
+        } else if (filterExistiert && filterAbgeschlossen) {
+            sichtbar = existiert || abgeschlossen;
+        } else {
+            sichtbar = true;
+        }
 
-            row.style.display = sichtbar ? "flex" : "none";
+        row.style.display = sichtbar ? "flex" : "none";
         }
     }
+
+    function copySum(id) {
+    const summe = document.getElementById(`${id}-summe`).textContent.trim();
+    const textArea = document.createElement("textarea");
+    textArea.value = summe; // Behalte das "$"-Zeichen
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+}
+
+
+
+
 </script>
 </head>
 <body onload="loadData()">
@@ -312,7 +357,7 @@
 
         <div style="margin-bottom: 20px;">
             <label for="suchfeld"><strong>Dienstnummer suchen:</strong></label>
-            <input type="text" id="suchfeld" placeholder="01 bis 99" style="padding: 8px; font-size: 16px; width: 100px; margin-right: 10px;" onkeydown="handleEnterPress(event)">
+            <input type="text" id="suchfeld" placeholder="01 bis 100" style="padding: 8px; font-size: 16px; width: 100px; margin-right: 10px;" onkeydown="handleEnterPress(event)">
             <button onclick="dienstnummerSuchen()" class="action-button">Suchen</button>
         </div>
 
@@ -323,17 +368,19 @@
             <label><input type="checkbox" id="filter-abgeschlossen" onchange="applyFilter()"> Abgeschlossen</label>
         </div>
 
-        <h2>Abrechnung</h2>
+        <h2>Abrechnung by Adahan</h2>
         <button class="action-button" onclick="saveData()">Speichern</button>
         <button class="action-button" onclick="loadData()">Laden</button>
         <button class="reset-button" onclick="resetPage()">Reset</button>
 
         <script>
-            for (let i = 1; i <= 99; i++) {
+            for (let i = 1; i <=100; i++) {
                 const formattedNumber = i < 10 ? `0${i}` : i;
                 document.write(`
                 <div class="datensatz" id="row-${formattedNumber}">
-                    <strong>${formattedNumber}:</strong>
+                <button onclick="copySum('${formattedNumber}')" title="Summe kopieren">💸</button>
+                    <strong style="margin-left: 10px;">${formattedNumber}:</strong>
+
                     <div class="werte">
                         <span>Werbungen:</span>
                         <button onclick="updateValue('${formattedNumber}', 'werbungen', -1)">-</button>
