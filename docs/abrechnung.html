@@ -295,10 +295,12 @@ h2 {
     }
 
     function handleEnterPress(event) {
-        if (event.key === 'Enter') {
-            dienstnummerSuchen();
-        }
+    if (event.key === 'Enter') {
+        dienstnummerSuchen();
+        document.getElementById("suchfeld").value = '';  // Löscht das Suchfeld
     }
+}
+
 
     function scrollToSearch() {
         const searchField = document.getElementById('suchfeld');
