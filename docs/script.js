@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'fib vip': 'Codewort: Döner mit allem <br> Es wird nicht nach dem Ausweis gefragt! (erst ab DN 90) (Ausnahme: DN 99 & 304) <br> Um die DN festzustellen Frage einfach:"Wie viele Euros brauchst du?" <br> Die Ränge Recruit, Trainee und Junior Agent tunen Dienstfahrzeuge kostenlos',
             'md vip': 'Primär: #ffffff <br> Sekundär: #ffffff <br> Perlerffekt: Nichts (Schwarz) <br> Keine Troll Felgen und keine Fenstertönung <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
             'md vip spezial unit': 'Primär: HEX: #008c7d <br> Sekundär: HEX: #008c7d <br> Perlerffekt: 10. Reihe das letzte (das weiß ähnliche) <br> Die Ränge Praktikant, Sanitäter, Allgemein Mediziner und Feld-Sanitäter tunen Dienstfahrzeuge kostenlos',
-            'pd vip': 'Primärfarbe: Öl Schwarz <br> Sekundärfarbe: Öl Schwarz <br> Perleffekt: Öl Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
+            'pd vip': 'Primärfarbe: Aluminium Grau <br> Sekundärfarbe: ./. <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
             'sd': 'Primärfarbe: Creme (Weiß) <br> Sekundärfarbe: - <br> Perleffekt: Alabaster Weiß <br> Info: Die Ränge Cadet, Junior Deputy und Deputy tunen Dienstfahrzeuge kostenlos',
             'us marshals vip': 'Primärfarbe: Jagt Grün <br> Sekundärfarbe: Jagt Grün <br> Perleffekt: Jagt Grün <br> Info: Die Ränge Praktikant, Deputy Marshal 1, Deputy Marshal 2 und Deputy Marshal 3 tunen Dienstfahrzeuge kostenlos',
             'ice company vip': 'Primärfarbe: Diamantblau <br> Sekundärfarbe: Kaugummi Blau <br> Perleffekt: Alabaster weiß <br> Reifenqualm: ./.',
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'onepiece': 'Primärfarbe: Hex: #aeb6bf <br> Sekundärfarbe: Hex: #aeb6bf <br> Perleffekt: 7. Reihe, das vierte (Helles Gold) <br> Reifenqualm: ./.',
             'onepieceug': 'Primärfarbe: Mattschwarz <br> Sekundärfarbe: / <br> Perleffekt: Helles Gold',
             'peso vip': 'Primärfarbe: #797582 <br> Sekundärfarbe: #797582 <br> Perleffekt: Schwarz (Nichts) <br> Reifenqualm: ./.',
-            'peso ug vip': 'Primärfarbe: #6b6b6a <br> Sekundärfarbe: #6b6b6a <br> Perleffekt: Himmelblau <br> eifenqualm: ./.', 
+            'peso ug vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Kiefern Grün <br> Perleffekt: Kiefern Grün <br> Reifenqualm: ./.', 
             'tokio manji vip': 'Primärfarbe: Pures Gold <br> Sekundär: Pures Gold <br> Perleffekt: Renngelb <br> Reifenqualm: ./. <br> Unterboden: ./.',
             'tokio manji ug vip': 'Primärfarbe: Rasengrün <br> Sekundär: / <br> Perleffekt: Limonengrün <br> Reifenqualm: ./. <br> Unterboden: ./.',
             'blancos vip': 'Primärfarbe: Marmor Braun <br> Sekundärfarbe: Marmor Braun <br> Perleffekt: Creme Weiß',
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'la casa nera': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Dunkles Rot',
             'street money murders': 'Primär: Lila Metallic <br> Sekundär: ./. <br> Perleffekt: Alabasterweiß',
             'most wanted marocs mc': 'Primär: Cabernet Rot <br> Sekundär: ./. <br> Perleffekt: Limonengrün',
-            'clover cartel': 'Primär: Khaki Grün <br> Sekundär: ./. <br> Perleffekt: Kastanien Braun',
+            'clover cartel': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Hellgrün',
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
