@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'street money murders': 'Primär: Lila Metallic <br> Sekundär: ./. <br> Perleffekt: Alabasterweiß',
             'most wanted marocs mc': 'Primär: Cabernet Rot <br> Sekundär: ./. <br> Perleffekt: Limonengrün',
             'clover cartel': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Hellgrün',
-            'red rose': 'Primär: #290000 <br> Sekundär: ./. <br> Perleffekt: 3. Reihe, das fünfte (Letzte)',
+            'red rose vip': 'Primär: #290000 <br> Sekundär: ./. <br> Perleffekt: 3. Reihe, das fünfte (Letzte)',
             
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
