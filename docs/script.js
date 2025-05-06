@@ -258,8 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'onepieceug': 'Primärfarbe: Mattschwarz <br> Sekundärfarbe: / <br> Perleffekt: Helles Gold',
             'peso vip': 'Primärfarbe: #797582 <br> Sekundärfarbe: #797582 <br> Perleffekt: Schwarz (Nichts) <br> Reifenqualm: ./.',
             'peso ug vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Kiefern Grün <br> Perleffekt: Kiefern Grün <br> Reifenqualm: ./.', 
-            'tokio manji vip': 'Primärfarbe: Pures Gold <br> Sekundär: Pures Gold <br> Perleffekt: Renngelb <br> Reifenqualm: ./. <br> Unterboden: ./.',
-            'tokio manji ug vip': 'Primärfarbe: Matt Violett <br> Sekundär: / <br> Perleffekt: Amethyst <br> Reifenqualm: ./. <br> Unterboden: ./.',
             'blancos vip': 'Primärfarbe: Marmor Braun <br> Sekundärfarbe: Marmor Braun <br> Perleffekt: Creme Weiß',
             'blancos ug vip': 'Primärfarbe: Asphalt Grau <br> Sekundärfarbe: Asphalt Grau <br> Perleffekt: Cobalt Blau', 
             'sacra corona unita vip': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: Metallic Lila <br> Unterboden: Weiß',
