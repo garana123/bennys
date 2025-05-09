@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Preisstruktur
     const priceConfig = {
         'Bremsen': {
-            prices: [210000, 270000, 240000, 0],
+            prices: [210000, 270000, 240000, 600000],
             selector: '#bremsen'
         },
         'Federung': {
-            prices: [210000, 270000, 240000, 0],
+            prices: [210000, 270000, 240000, 600000],
             selector: '#federung'
 
         },
         'Getriebe': {
-            prices: [270000, 420000, 300000, 0],
+            prices: [270000, 420000, 300000, 600000],
             selector: '#getriebe'
         },
         'Motor': {
-            prices: [300000, 480000, 300000, 0],
+            prices: [300000, 480000, 300000, 600000],
             selector: '#motor'
         },
         'Turbo': {
