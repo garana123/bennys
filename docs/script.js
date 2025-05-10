@@ -269,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'vargo azrail vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
             'kylo sanymaaa vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
             'emreh can vip2': 'Info: Bekommen 40% auf alle Fahrzeuge',
+            'Mario Wagner vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
             'abderahim vip2': 'Info: Gilt für alle mit dem Nachnamen Abderahim <br> Bekommen 40% auf alle Fahrzeuge',
             'pd cid vip': 'Primärfarbe: Mitternachtblau <br> Sekundärfarbe: ./. <br> Perleffekt: Stahlguss (Bei Schwarz) <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos,', 
             'pd gtf vip': 'Primärfarbe: Schwarz <br> Sekundärfarbe: Schwarz <br> Perleffekt: Schwarz <br> Info: Die Ränge Praktikant, Rekrut, Junior Officer und Officer 1 tunen Dienstfahrzeuge kostenlos',
