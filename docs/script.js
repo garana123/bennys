@@ -300,6 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Van De Straat': 'Primär: Schwarz Matt <br> Sekundär: Schwarz Matt <br> Perleffekt: Lachsrosa',
             'Redline MC': 'Primär: Dunkles Grau <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume Rosa',
             'Black Hand': 'Primär: Jagdgrün <br> Sekundär: ./. <br> Perleffekt: Bonbonrot',
+            'Grove Street': 'Primär: Rasengrün <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
         };
