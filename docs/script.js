@@ -296,7 +296,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'most wanted marocs mc': 'Primär: Cabernet Rot <br> Sekundär: ./. <br> Perleffekt: Limonengrün',
             'clover cartel': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Hellgrün',
             'red rose vip': 'Primär: #290000 <br> Sekundär: ./. <br> Perleffekt: 3. Reihe, das fünfte (Letzte)',
-            
+            'La Moretti': 'Primär: xxx  <br> Sekundär: xxx <br> Perleffekt: xxx',
+            'Van De Straat': 'Primär: Schwarz Matt <br> Sekundär: Schwarz Matt <br> Perleffekt: Lachsrosa',
+            'Redline MC': 'Primär: Dunkles Grau <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume Rosa',
+            'Black Hand': 'Primär: Jagdgrün <br> Sekundär: ./. <br> Perleffekt: Bonbonrot',
 
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
         };
