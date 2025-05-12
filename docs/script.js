@@ -297,7 +297,7 @@
             'clover cartel': 'Primär: Matt Schwarz <br> Sekundär: ./. <br> Perleffekt: Hellgrün',
             'red rose vip': 'Primär: #290000 <br> Sekundär: ./. <br> Perleffekt: 3. Reihe, das fünfte (Letzte)',
             'la moretti': 'Primär: #121011 <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume',
-            'van de straat': 'Primär: Schwarz Matt <br> Sekundär: Schwarz Matt <br> Perleffekt: Lachsrosa',
+            'van de straat vip': 'Primär: Schwarz Matt <br> Sekundär: Schwarz Matt <br> Perleffekt: Lachsrosa',
             'redline mc vip': 'Primär: Dunkles Grau <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume Rosa',
             'black hand': 'Primär: Jagdgrün <br> Sekundär: ./. <br> Perleffekt: Bonbonrot',
             'grove street': 'Primär: Rasengrün <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
