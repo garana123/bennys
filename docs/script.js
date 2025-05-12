@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     // Preisstruktur
     const priceConfig = {
         'Bremsen': {
@@ -301,7 +301,9 @@ document.addEventListener('DOMContentLoaded', () => {
             'redline mc vip': 'Primär: Dunkles Grau <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume Rosa',
             'black hand': 'Primär: Jagdgrün <br> Sekundär: ./. <br> Perleffekt: Bonbonrot',
             'grove street': 'Primär: Rasengrün <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
+            'zivi vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
 
+            
             // Hier kannst du weitere Zuordnungen und Infos hinzufügen
         };
 
