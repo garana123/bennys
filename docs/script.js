@@ -299,7 +299,7 @@
             'la moretti': 'Primär: #121011 <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume',
             'van de straat vip': 'Primär: Schwarz Matt <br> Sekundär: Schwarz Matt <br> Perleffekt: Lachsrosa',
             'redline mc vip': 'Primär: Dunkles Grau <br> Sekundär: ./. <br> Perleffekt: Zuckerpflaume Rosa',
-            'black hand': 'Primär: Jagdgrün <br> Sekundär: ./. <br> Perleffekt: Bonbonrot',
+            'black hand vip': 'Primär: Jagdgrün <br> Sekundär: ./. <br> Perleffekt: Bonbonrot',
             'grove street': 'Primär: Rasengrün <br> Sekundär: ./. <br> Perleffekt: Helles Gold',
             'zivi vip2': 'Info: Bekommen 40% auf alle Fahrzeuge', 
 
