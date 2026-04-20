@@ -87,13 +87,8 @@
             selector: '#quarterdeck'
         },
         'felgen': {
-            prices: [
-                [0, 0, 0, 0],
-                [25000, 25000, 25000, 25000],
-                [75000, 75000, 75000, 75000]
-            ],
-            selector: '#felgen',
-            isDropdown: true
+            prices: [15000, 15000, 15000, 15000],
+            selector: '#felgen'
         },
         'headlights': {
             prices: [
