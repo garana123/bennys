@@ -494,7 +494,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
 
     const webhooks = {
-        "mitarbeiter_1.html": "WEBHOOK_1",
+        "mitarbeiter_1.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
         "mitarbeiter_2.html": "WEBHOOK_2",
         "mitarbeiter_3.html": "WEBHOOK_3",
         "mitarbeiter_4.html": "WEBHOOK_4"
