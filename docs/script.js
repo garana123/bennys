@@ -512,19 +512,6 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const dienstnummerValue = document.getElementById("dienstnummerkunde").value;
 
     // 8. Gutscheine auswerten: Zähle, wie viele Gutscheine verwendet wurden
-    const voucher1Value = document.getElementById("gutschein1").value;
-    const voucher2Value = document.getElementById("gutschein2").value;
-    let voucherCount = 0;
-
-    if (voucher1Value && voucher1Value !== "0") {
-        voucherCount++;
-    }
-    if (voucher2Value && voucher2Value !== "0") {
-        voucherCount++;
-    }
-
-    // Gutschein-Text nur hinzufügen, wenn ein Gutschein verwendet wurde
-    const voucherText = voucherCount > 0 ?  ` -- Gutschein: [${voucherCount}]` : "";
 
     // Dienstnummer nur hinzufügen, wenn sie nicht leer ist
     const dienstnummerText = dienstnummerValue ?  ` -- Dienstnummer: ${dienstnummerValue}` : "";
