@@ -494,10 +494,10 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
 
     const webhooks = {
-        "mitarbeiter_1.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
-        "mitarbeiter_2.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
-        "mitarbeiter_3.html": "WEBHOOK_3",
-        "mitarbeiter_4.html": "WEBHOOK_4"
+        "mitarbeiter_01.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
+        "mitarbeiter_02.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
+        "mitarbeiter_03.html": "WEBHOOK_3",
+        "mitarbeiter_04.html": "WEBHOOK_4"
     };
 
     const currentPage = window.location.pathname.split("/").pop();
