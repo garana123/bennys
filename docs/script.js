@@ -520,15 +520,34 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
 
     // Nachricht via Discord-Webhook senden
-    fetch("https://discordapp.com/api/webhooks/1495705978895597670/2dx2l1E2QyZkp9OMKqLLe6-XNrDSGdzZ5V48BWeFq5k2EdGJhi6LUQMTveP1boUgG2HU", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: message })
+    // Für jede Mitarbeiter-Seite eigener Webhook
+
+const webhooks = {
+    "mitarbeiter_1.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
+    "mitarbeiter_2.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
+    "mitarbeiter_3.html": "DEIN_WEBHOOK_3",
+    "mitarbeiter_4.html": "DEIN_WEBHOOK_4"
+};
+
+// Aktuelle Datei erkennen
+const currentPage = window.location.pathname.split("/").pop();
+
+// Richtigen Webhook wählen
+const webhookURL = webhooks[currentPage];
+
+// Nachricht senden
+fetch(webhookURL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        content: message
     })
-    .then(response => response.text())
-    .then(data => console.log("Erfolg:", data))
-    .catch(error => console.error("Fehler:", error));
-});
+})
+.then(response => response.text())
+.then(data => console.log("Erfolg:", data))
+.catch(error => console.error("Fehler:", error));
 
 window.onload = function() {
     const dienstnummer = localStorage.getItem("dienstnummer"); // Auslesen der Dienstnummer
