@@ -495,7 +495,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
 
     const webhooks = {
         "mitarbeiter_1.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
-        "mitarbeiter_2.html": "WEBHOOK_2",
+        "mitarbeiter_2.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
         "mitarbeiter_3.html": "WEBHOOK_3",
         "mitarbeiter_4.html": "WEBHOOK_4"
     };
