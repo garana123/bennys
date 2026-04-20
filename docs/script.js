@@ -522,7 +522,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     // Nachricht via Discord-Webhook senden
     // Für jede Mitarbeiter-Seite eigener Webhook
 
-const webhooks = {
+    const webhooks = {
     "mitarbeiter_1.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
     "mitarbeiter_2.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
     "mitarbeiter_3.html": "DEIN_WEBHOOK_3",
@@ -530,21 +530,21 @@ const webhooks = {
 };
 
 // Aktuelle Datei erkennen
-const currentPage = window.location.pathname.split("/").pop();
+    const currentPage = window.location.pathname.split("/").pop();
 
 // Richtigen Webhook wählen
-const webhookURL = webhooks[currentPage];
+    const webhookURL = webhooks[currentPage];
 
 // Nachricht senden
-fetch(webhookURL, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        content: message
+    fetch(webhookURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            content: message
+        })
     })
-})
 .then(response => response.text())
 .then(data => console.log("Erfolg:", data))
 .catch(error => console.error("Fehler:", error));
