@@ -517,7 +517,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const dienstnummerText = dienstnummerValue ?  ` -- Dienstnummer: ${dienstnummerValue}` : "";
 
     // Zusammensetzen der Nachricht:
-    const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}${voucherText}`;
+    const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
 
     // Nachricht via Discord-Webhook senden
     fetch("https://discordapp.com/api/webhooks/1495705978895597670/2dx2l1E2QyZkp9OMKqLLe6-XNrDSGdzZ5V48BWeFq5k2EdGJhi6LUQMTveP1boUgG2HU", {
