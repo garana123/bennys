@@ -613,7 +613,7 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}${voucherText}`;
 
     // Nachricht via Discord-Webhook senden
-    fetch("https://discord.com/api/webhooks/1373434353756934154/C0QmG8Gzgzc37UGbu0vCrilqowFPJaZkmXmOjglhhJt786NXVq98WMv6BvhUyzVjtakI", {
+    fetch("https://discordapp.com/api/webhooks/1495705978895597670/2dx2l1E2QyZkp9OMKqLLe6-XNrDSGdzZ5V48BWeFq5k2EdGJhi6LUQMTveP1boUgG2HU", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content: message })
