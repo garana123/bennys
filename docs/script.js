@@ -1,50 +1,9 @@
     document.addEventListener('DOMContentLoaded', () => {
     // Preisstruktur
     const priceConfig = {
-        'Bremsen': {
-            prices: [210000, 270000, 240000, 600000],
-            selector: '#bremsen'
-        },
-        'Federung': {
-            prices: [210000, 270000, 240000, 600000],
-            selector: '#federung'
-
-        },
-        'Getriebe': {
-            prices: [270000, 420000, 300000, 600000],
-            selector: '#getriebe'
-        },
-        'Motor': {
-            prices: [300000, 480000, 300000, 600000],
-            selector: '#motor'
-        },
-        'Turbo': {
-            prices: [300000, 450000, 240000, 1000000],
-            selector: '#turbo'
-        },
         'Fulltune': {
-            prices: [800000, 1200000, 600000, 1000000],
+            prices: [100000, 100000, 100000, 100000],
             selector: '#fulltune'
-        },
-        'Panzerung': {
-            prices: [300000, 500000, 240000, 600000],
-            selector: '#panzerung'
-        },
-        'Fenstertönung': {
-            prices: [30000, 39000, 27000, 120000],
-            selector: '#fenstertoenung'
-        },
-        'Sticker': {
-            prices: [30000, 36000, 30000, 180000],
-            selector: '#sticker'
-        },
-        'Hupen': {
-            prices: [27000, 28500, 27000, 0],
-            selector: '#hupe'
-        },
-        'Interieur': {
-            prices: [72000, 45000, 30000, 0],
-            selector: '#interieur'
         },
         'Primärfarbe': {
             prices: [60000, 75000, 48000, 405000],
