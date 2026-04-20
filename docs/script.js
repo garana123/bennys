@@ -466,18 +466,11 @@ function onlyOne(checkbox) {
 
 
 document.getElementById("sendenButton").addEventListener("click", () => {
-    // 1. Auslesen der "Dienstnummer des Arbeiters" aus dem Element
+
     const workerNumber = localStorage.getItem("dienstnummer") || "Unbekannt";
-
-    
-
-    // 2. Name aus dem Eingabefeld "kundenname"
     const customerName = document.getElementById("kundenname").value;
-
-    // 3. Endpreis aus dem Element "total-price"
     let finalPrice = document.getElementById("total-price").textContent;
 
-    // 4. Headlights prüfen und ggf. an den Preis anhängen
     const headlightsValue = document.getElementById("headlights").value;
     if (headlightsValue === "1") {
         finalPrice += " (inkl. Headlights)";
@@ -485,57 +478,36 @@ document.getElementById("sendenButton").addEventListener("click", () => {
         finalPrice += " (inkl. Headlightsfarbe)";
     }
 
-    // 5. Customkennzeichen prüfen und ggf. an den Preis anhängen
-    const customKennzeichenChecked = document.getElementById("customkennzeichen").checked;
-    if (customKennzeichenChecked) {
+    if (document.getElementById("customkennzeichen").checked) {
         finalPrice += " (inkl. Kennzeichen)";
     }
 
-    // 6. Ausgewählte Zuordnung aus dem Dropdown "zuordnungSelect"
     const zuordnungSelect = $('#zuordnungSelect');
-    const zuordnungValue = zuordnungSelect.val();
     const zuordnungText = zuordnungSelect.find("option:selected").text();
     const filteredZuordnungText = zuordnungText.replace(/[^\p{L}\s]/gu, '');
 
-    console.log("Debug: Dropdown 'zuordnungSelect' value:", zuordnungValue);
-
-    if (zuordnungValue === "zivilist") {
-        // Hier keine Meldung mehr anzeigen
-        // Du kannst stattdessen zum Beispiel eine Funktion ausführen oder das Formular weiter bearbeiten
-    } else {
-        // Hier kannst du z.B. den Text irgendwo anders anzeigen
-        // Oder eine andere Aktion ausführen
-    }
-
-
-    // 7. Dienstnummer aus dem Eingabefeld "dienstnummer"
     const dienstnummerValue = document.getElementById("dienstnummerkunde").value;
+    const dienstnummerText = dienstnummerValue
+        ? ` -- Dienstnummer: ${dienstnummerValue}`
+        : "";
 
-    // 8. Gutscheine auswerten: Zähle, wie viele Gutscheine verwendet wurden
-
-    // Dienstnummer nur hinzufügen, wenn sie nicht leer ist
-    const dienstnummerText = dienstnummerValue ?  ` -- Dienstnummer: ${dienstnummerValue}` : "";
-
-    // Zusammensetzen der Nachricht:
     const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
 
-    // Nachricht via Discord-Webhook senden
-    // Für jede Mitarbeiter-Seite eigener Webhook
-
     const webhooks = {
-    "mitarbeiter_1.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
-    "mitarbeiter_2.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
-    "mitarbeiter_3.html": "DEIN_WEBHOOK_3",
-    "mitarbeiter_4.html": "DEIN_WEBHOOK_4"
-};
+        "mitarbeiter_1.html": "WEBHOOK_1",
+        "mitarbeiter_2.html": "WEBHOOK_2",
+        "mitarbeiter_3.html": "WEBHOOK_3",
+        "mitarbeiter_4.html": "WEBHOOK_4"
+    };
 
-// Aktuelle Datei erkennen
     const currentPage = window.location.pathname.split("/").pop();
-
-// Richtigen Webhook wählen
     const webhookURL = webhooks[currentPage];
 
-// Nachricht senden
+    if (!webhookURL) {
+        console.error("Kein Webhook für diese Seite gefunden!");
+        return;
+    }
+
     fetch(webhookURL, {
         method: "POST",
         headers: {
@@ -545,17 +517,19 @@ document.getElementById("sendenButton").addEventListener("click", () => {
             content: message
         })
     })
-.then(response => response.text())
-.then(data => console.log("Erfolg:", data))
-.catch(error => console.error("Fehler:", error));
+    .then(response => response.text())
+    .then(data => console.log("Erfolg:", data))
+    .catch(error => console.error("Fehler:", error));
 
-window.onload = function() {
-    const dienstnummer = localStorage.getItem("dienstnummer"); // Auslesen der Dienstnummer
+}); // <-- WICHTIG! Event hier sauber schließen
+
+
+
+window.onload = function () {
+    const dienstnummer = localStorage.getItem("dienstnummer");
 
     if (dienstnummer) {
-        // Ersetzen des Platzhalters mit der Dienstnummer
-        document.querySelector('.dienstnummer-info').innerHTML = `Dienstnummer des Arbeiters: ${dienstnummer}`;
-    } else {
-        console.error("Dienstnummer nicht gefunden.");
+        document.querySelector('.dienstnummer-info').innerHTML =
+            `Dienstnummer des Arbeiters: ${dienstnummer}`;
     }
 };
