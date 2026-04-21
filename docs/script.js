@@ -462,45 +462,53 @@ function onlyOne(checkbox) {
 }
 
     // Überprüfen und anpassen des Platzhalters beim Öffnen des Dropdowns
-window.onload = function() {
+window.addEventListener("load", function () {
     const dienstnummer = localStorage.getItem("dienstnummer");
+    const dienstnummerBox = document.querySelector(".dienstnummer-info");
 
-    if (dienstnummer) {
-      document.querySelector('.dienstnummer-info').innerHTML = `Dienstnummer des Arbeiters: ${dienstnummer}`;
-    } else {
-      console.error("Dienstnummer nicht gefunden.");
+    // Dienstnummer anzeigen
+    if (dienstnummerBox) {
+        if (dienstnummer) {
+            dienstnummerBox.innerHTML = `Dienstnummer des Arbeiters: ${dienstnummer}`;
+        } else {
+            dienstnummerBox.innerHTML = "Dienstnummer des Arbeiters: Unbekannt";
+        }
+
+        dienstnummerBox.style.visibility = "visible";
     }
 
+    // Senden Button
+    const sendenButton = document.getElementById("sendenButton");
 
-document.getElementById("sendenButton").addEventListener("click", () => {
+    if (sendenButton) {
+        sendenButton.addEventListener("click", () => {
+            const workerNumber = localStorage.getItem("dienstnummer") || "Unbekannt";
+            const customerName = document.getElementById("kundenname").value;
+            let finalPrice = document.getElementById("total-price").textContent;
 
-    const workerNumber = localStorage.getItem("dienstnummer") || "Unbekannt";
-    const customerName = document.getElementById("kundenname").value;
-    let finalPrice = document.getElementById("total-price").textContent;
+            const headlightsValue = document.getElementById("headlights").value;
+            if (headlightsValue === "1") {
+                finalPrice += " (inkl. Headlights)";
+            } else if (headlightsValue === "2") {
+                finalPrice += " (inkl. Headlightsfarbe)";
+            }
 
-    const headlightsValue = document.getElementById("headlights").value;
-    if (headlightsValue === "1") {
-        finalPrice += " (inkl. Headlights)";
-    } else if (headlightsValue === "2") {
-        finalPrice += " (inkl. Headlightsfarbe)";
-    }
+            if (document.getElementById("customkennzeichen").checked) {
+                finalPrice += " (inkl. Kennzeichen)";
+            }
 
-    if (document.getElementById("customkennzeichen").checked) {
-        finalPrice += " (inkl. Kennzeichen)";
-    }
+            const zuordnungSelect = $('#zuordnungSelect');
+            const zuordnungText = zuordnungSelect.find("option:selected").text();
+            const filteredZuordnungText = zuordnungText.replace(/[^\p{L}\s]/gu, '');
 
-    const zuordnungSelect = $('#zuordnungSelect');
-    const zuordnungText = zuordnungSelect.find("option:selected").text();
-    const filteredZuordnungText = zuordnungText.replace(/[^\p{L}\s]/gu, '');
+            const dienstnummerValue = document.getElementById("dienstnummerkunde").value;
+            const dienstnummerText = dienstnummerValue
+                ? ` -- Dienstnummer: ${dienstnummerValue}`
+                : "";
 
-    const dienstnummerValue = document.getElementById("dienstnummerkunde").value;
-    const dienstnummerText = dienstnummerValue
-        ? ` -- Dienstnummer: ${dienstnummerValue}`
-        : "";
+            const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
 
-    const message = `${workerNumber} - ${customerName} | ${finalPrice} | ${filteredZuordnungText}${dienstnummerText}`;
-
-    const webhooks = {
+            const webhooks = {
         "mitarbeiter_01.html": "https://discordapp.com/api/webhooks/1495787692833767464/5CZhZ6QgSTZnEcF53RLEOWV-HwWmbHHBVDWaYsl0oKbE8x_Z2SF7pAqyJAZEqO4P6p66",
         "mitarbeiter_02.html": "https://discordapp.com/api/webhooks/1495787737482002563/GTYU3l7JEa6ljGpXRuuueX_JnYY4bXzIdsPPYLuJwIdEMBigOAxUq0XgRzaIjyuJL4OC",
         "mitarbeiter_03.html": "https://discordapp.com/api/webhooks/1495787770981912594/3m69fdfrEVrSiKYhwasFH7ziE2mUG6bD4CdFMfEwp8DFodJgrxJfKu2cqLlQgyBlUYMV",
@@ -596,34 +604,25 @@ document.getElementById("sendenButton").addEventListener("click", () => {
     };
 
     const currentPage = window.location.pathname.split("/").pop();
-    const webhookURL = webhooks[currentPage];
+            const webhookURL = webhooks[currentPage];
 
-    if (!webhookURL) {
-        console.error("Kein Webhook für diese Seite gefunden!");
-        return;
+            if (!webhookURL) {
+                console.error("Kein Webhook für diese Seite gefunden!");
+                return;
+            }
+
+            fetch(webhookURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    content: message
+                })
+            })
+            .then(response => response.text())
+            .then(data => console.log("Erfolg:", data))
+            .catch(error => console.error("Fehler:", error));
+        });
     }
-
-    fetch(webhookURL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            content: message
-        })
-    })
-    .then(response => response.text())
-    .then(data => console.log("Erfolg:", data))
-    .catch(error => console.error("Fehler:", error));
-
-}); // <-- WICHTIG! Event hier sauber schließen
-
-
-
-    const dienstnummer = localStorage.getItem("dienstnummer");
-
-    if (dienstnummer) {
-        document.querySelector('.dienstnummer-info').innerHTML =
-            `Dienstnummer des Arbeiters: ${dienstnummer}`;
-
-};
+});
