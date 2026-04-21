@@ -41,10 +41,6 @@
             prices: [1000, 1000, 1000, 1000],
             selector: '#unterboden'
         },
-        'Quarterdeck': {
-            prices: [30000, 30000, 27000, 0],
-            selector: '#quarterdeck'
-        },
         'felgen': {
             prices: [1200, 1200, 1200, 1200],
             selector: '#felgen'
