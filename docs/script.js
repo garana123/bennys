@@ -620,11 +620,10 @@ document.getElementById("sendenButton").addEventListener("click", () => {
 
 
 
-window.onload = function () {
     const dienstnummer = localStorage.getItem("dienstnummer");
 
     if (dienstnummer) {
         document.querySelector('.dienstnummer-info').innerHTML =
             `Dienstnummer des Arbeiters: ${dienstnummer}`;
-    }
+
 };
