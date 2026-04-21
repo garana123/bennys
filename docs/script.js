@@ -462,7 +462,14 @@ function onlyOne(checkbox) {
 }
 
     // Überprüfen und anpassen des Platzhalters beim Öffnen des Dropdowns
+window.onload = function() {
+    const dienstnummer = localStorage.getItem("dienstnummer");
 
+    if (dienstnummer) {
+      document.querySelector('.dienstnummer-info').innerHTML = `Dienstnummer des Arbeiters: ${dienstnummer}`;
+    } else {
+      console.error("Dienstnummer nicht gefunden.");
+    }
 
 
 document.getElementById("sendenButton").addEventListener("click", () => {
