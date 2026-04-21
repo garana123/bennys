@@ -57,6 +57,10 @@
         'Fahrzeugteile': {
             prices: [54000, 63000, 45000, 45000], // Preise pro Stück
             selector: '#fahrzeugteile-anzahl'
+        },
+        'Hupen': {
+            prices: [35000, 50000, 35000, 0],
+            selector: '#hupe'
         }
     };
 
