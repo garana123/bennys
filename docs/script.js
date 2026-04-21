@@ -463,7 +463,7 @@ function onlyOne(checkbox) {
 
     // Überprüfen und anpassen des Platzhalters beim Öffnen des Dropdowns
 window.addEventListener("load", function () {
-    const dienstnummer = localStorage.getItem("dienstnummer");
+    const dienstnummer = sessionStorage.getItem("dienstnummer") || sessionStorage.getItem("user");
     const dienstnummerBox = document.querySelector(".dienstnummer-info");
 
     // Dienstnummer anzeigen
@@ -482,7 +482,7 @@ window.addEventListener("load", function () {
 
     if (sendenButton) {
         sendenButton.addEventListener("click", () => {
-            const workerNumber = localStorage.getItem("dienstnummer") || "Unbekannt";
+            const workerNumber = sessionStorage.getItem("dienstnummer") || sessionStorage.getItem("user") || "Unbekannt";
             const customerName = document.getElementById("kundenname").value;
             let finalPrice = document.getElementById("total-price").textContent;
 
