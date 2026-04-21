@@ -2,43 +2,43 @@
     // Preisstruktur
     const priceConfig = {
         'Fulltune': {
-            prices: [100000, 100000, 100000, 100000],
+            prices: [15625, 15625, 15625, 15625],
             selector: '#fulltune'
         },
         'Primärfarbe': {
-            prices: [60000, 75000, 48000, 405000],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#primaerfarbe'
         },
         'Sekundärfarbe': {
-            prices: [45000, 60000, 27000, 300000],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#sekundaerfarbe'
         },
         'Perleffekt': {
-            prices: [30000, 45000, 24000, 180000],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#perleffekt'
         },
         'Nummernschildfarbe': {
-            prices: [36000, 30000, 30000, 0],
+            prices: [200, 200, 200, 200],
             selector: '#nummernschild'
         },
         'Custom-Kennzeichen': {
-            prices: [3000000, 3000000, 3000000, 3000000],
+            prices: [200000, 200000, 200000, 200000],
             selector: '#customkennzeichen'
         },
         'Reifenfarbe': {
-            prices: [27000, 30000, 30000, 180000],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#reifenfarbe'
         },
         'Reifenqualm': {
-            prices: [27000, 30000, 24000, 0],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#reifenqualm'
         },
         'Xenon Scheinwerfer': {
-            prices: [30000, 30000, 30000, 180000],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#xenon'
         },
         'Unterboden': {
-            prices: [27000, 33000, 24000, 180000],
+            prices: [1000, 1000, 1000, 1000],
             selector: '#unterboden'
         },
         'Quarterdeck': {
@@ -46,14 +46,14 @@
             selector: '#quarterdeck'
         },
         'felgen': {
-            prices: [15000, 15000, 15000, 15000],
+            prices: [1200, 1200, 1200, 1200],
             selector: '#felgen'
         },
         'headlights': {
             prices: [
                 [0, 0, 0, 0],
-                [1000000, 1000000, 1000000, 1000000],
-                [500000, 500000, 500000, 500000]
+                [150000, 150000, 150000, 150000],
+                [100000, 100000, 100000, 100000]
             ],
             selector: '#headlights',
             isDropdown: true
