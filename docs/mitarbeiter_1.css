@@ -201,10 +201,21 @@ select:focus {
 }
 
 .dienstnummer-info {
-    margin-top: 22px;
-    padding-top: 16px;
-    border-top: 1px solid #333;
-    color: #999;
+    margin-top: 20px;
+    padding-top: 16.5px;
+    color: #888;
+    position: relative; /* Neu */
+}
+
+.dienstnummer-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 90%; /* Länge der Linie hier anpassen */
+    height: 1.1px;
+    background: #333;
 }
 
 .radio-group {
