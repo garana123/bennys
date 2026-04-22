@@ -218,7 +218,7 @@
             'onepiece ug': 'Primär: Matt Schwarz <br> Sekundär: <br> Perleffekt: Helles Gold',
             '069': 'Primär: Verbotenes Blau <br> Sekundär: <br> Perleffekt: Mitternachtsblau',
             '666': 'Primär: Matt Grau <br> Sekundär: <br> Perleffekt: Elektrisches Rosa',
-            'district 67': 'Primär: <br> Sekundär: <br> Perleffekt: ',
+            'district 67': 'Primär: Paradies Blau <br> Sekundär: <br> Perleffekt: Matt Schwarz',
             'k-town': 'Primär: <br> Sekundär: <br> Perleffekt: ',
             'zivi vip2': 'Info: Bekommen 40% auf alle Fahrzeuge'
 
