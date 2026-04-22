@@ -542,7 +542,7 @@ window.addEventListener("load", function () {
         "mitarbeiter_27.html": "https://discordapp.com/api/webhooks/1495882245754327070/jB8CQg_X6Aw_b09Q5eWEwIPFHTiDEcqZoXEQ9MF05oT4D0b2VuhOOGNRHS-a7Bojc74r",
         "mitarbeiter_28.html": "https://discordapp.com/api/webhooks/1495889198522302656/QsG_9Gc1zXU1An7SvzgqKXqm7VWdDljcH_pymLyBuLmMLh2s4gZ2AgMWeBUFV3GPUWni",
         "mitarbeiter_29.html": "https://discordapp.com/api/webhooks/1495889247675089079/f3gL4F2r_UsRgMp_lDmSS4A-TVxsZBclKSr5fjd8orzH8TqINbxrEO2PPrULu-ZFD1dQ",
-        "mitarbeiter_30.html": "https://discordapp.com/api/webhooks/1495889247675089079/f3gL4F2r_UsRgMp_lDmSS4A-TVxsZBclKSr5fjd8orzH8TqINbxrEO2PPrULu-ZFD1dQ",
+        "mitarbeiter_30.html": "https://discordapp.com/api/webhooks/1496641404515127417/yQMaJ0iZzXRDL9vHZAp-HeoeycMb1VHOF_4xWxCBfUMP4Ilhi841hn_KG5WS3W7RZevG",
         "mitarbeiter_31.html": "https://discordapp.com/api/webhooks/1495889367498100748/NiEus5XxvX1A65cjJ_pg6L6XfTlgEKWT8iIqW9TA3sodO8narMuETtHwYyolPLuzdZn3",
         "mitarbeiter_32.html": "https://discordapp.com/api/webhooks/1495889428340539573/AUowxPAaQpRJ_6B8Ci2DAZWbISATzQk0Q_4hsOqfACs3IeGyNe1d3-4qhpZSD7S3vSgV",
         "mitarbeiter_33.html": "https://discordapp.com/api/webhooks/1495889481868247240/gxWZFW5gyCN_h2dtUujVZzccJvQnpSuu6W0YzTNBlsF8jcilEJ--ltHk47_Zn5VwA0x3",
