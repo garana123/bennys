@@ -45,6 +45,10 @@
             prices: [750, 750, 750, 750],
             selector: '#felgen'
         },
+        'fenstertoenung': {
+            prices: [250, 250, 250, 250],
+            selector: '#fenstertoenung'
+        },
         'headlights': {
             prices: [
                 [0, 0, 0, 0],
