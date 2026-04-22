@@ -19,7 +19,7 @@
         },
         'Nummernschildfarbe': {
             prices: [150, 150, 150, 150],
-            selector: '#nummernschild'
+            selector: '#nummernschildfarbe'
         },
         'Custom-Kennzeichen': {
             prices: [200000, 200000, 200000, 200000],
