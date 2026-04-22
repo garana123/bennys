@@ -2,23 +2,23 @@
     // Preisstruktur
     const priceConfig = {
         'Fulltune': {
-            prices: [15625, 15625, 15625, 15625],
+            prices: [9767, 9767, 9767, 9767],
             selector: '#fulltune'
         },
         'Primärfarbe': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#primaerfarbe'
         },
         'Sekundärfarbe': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#sekundaerfarbe'
         },
         'Perleffekt': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#perleffekt'
         },
         'Nummernschildfarbe': {
-            prices: [200, 200, 200, 200],
+            prices: [125, 125, 125, 125],
             selector: '#nummernschild'
         },
         'Custom-Kennzeichen': {
@@ -26,23 +26,23 @@
             selector: '#customkennzeichen'
         },
         'Reifenfarbe': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#reifenfarbe'
         },
         'Reifenqualm': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#reifenqualm'
         },
         'Xenon Scheinwerfer': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#xenon'
         },
         'Unterboden': {
-            prices: [1000, 1000, 1000, 1000],
+            prices: [625, 625, 625, 625],
             selector: '#unterboden'
         },
         'felgen': {
-            prices: [1200, 1200, 1200, 1200],
+            prices: [750, 750, 750, 750],
             selector: '#felgen'
         },
         'headlights': {
@@ -55,11 +55,11 @@
             isDropdown: true
         },
         'Fahrzeugteile': {
-            prices: [54000, 63000, 45000, 45000], // Preise pro Stück
+            prices: [437, 437, 437, 437], // Preise pro Stück
             selector: '#fahrzeugteile-anzahl'
         },
         'Hupen': {
-            prices: [35000, 50000, 35000, 0],
+            prices: [312, 312, 312, 312],
             selector: '#hupe'
         }
     };
