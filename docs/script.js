@@ -2,23 +2,23 @@
     // Preisstruktur
     const priceConfig = {
         'Fulltune': {
-            prices: [9767, 9767, 9767, 9767],
+            prices: [10000, 10000, 10000, 10000],
             selector: '#fulltune'
         },
         'Primärfarbe': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#primaerfarbe'
         },
         'Sekundärfarbe': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#sekundaerfarbe'
         },
         'Perleffekt': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#perleffekt'
         },
         'Nummernschildfarbe': {
-            prices: [125, 125, 125, 125],
+            prices: [150, 150, 150, 150],
             selector: '#nummernschild'
         },
         'Custom-Kennzeichen': {
@@ -26,19 +26,19 @@
             selector: '#customkennzeichen'
         },
         'Reifenfarbe': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#reifenfarbe'
         },
         'Reifenqualm': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#reifenqualm'
         },
         'Xenon Scheinwerfer': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#xenon'
         },
         'Unterboden': {
-            prices: [625, 625, 625, 625],
+            prices: [650, 650, 650, 650],
             selector: '#unterboden'
         },
         'felgen': {
@@ -55,11 +55,11 @@
             isDropdown: true
         },
         'Fahrzeugteile': {
-            prices: [437, 437, 437, 437], // Preise pro Stück
+            prices: [450, 450, 450, 450], // Preise pro Stück
             selector: '#fahrzeugteile-anzahl'
         },
         'Hupen': {
-            prices: [312, 312, 312, 312],
+            prices: [350, 350, 350, 350],
             selector: '#hupe'
         }
     };
