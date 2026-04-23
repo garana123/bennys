@@ -22,7 +22,7 @@
             selector: '#nummernschildfarbe'
         },
         'Custom-Kennzeichen': {
-            prices: [200000, 200000, 200000, 200000],
+            prices: [400000, 400000, 400000, 400000],
             selector: '#customkennzeichen'
         },
         'Reifenfarbe': {
