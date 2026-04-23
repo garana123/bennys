@@ -203,7 +203,7 @@
         const infoBox = document.getElementById('zuordnungInfo');
         const optionInfo = {
             'bennys': 'Primär: <br> Sekundär:  <br> Perleffekt: <br> Reifenqualm: - <br> Unterboden: -',
-            'fib': '<br> Es wird nicht nach dem Ausweis gefragt! <br><br>',
+            'fib': '',
             'md': 'Primär: Alabaster Weiß <br> Sekundär: Alabaster Weiß <br> Perlerffekt: Alabaster weiß <br> Keine Troll Felgen und keine Fenstertönung <br>',
             'md spezial unit': 'Primär: <br> Sekundär: <br> Perlerffekt: <br>',
             'pd': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: <br>',
