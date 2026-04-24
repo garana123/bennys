@@ -203,7 +203,7 @@
         const infoBox = document.getElementById('zuordnungInfo');
         const optionInfo = {
             'bennys': 'Primär: <br> Sekundär:  <br> Perleffekt: <br> Reifenqualm: - <br> Unterboden: -',
-            'fib': '',
+            'fib': 'Ihr nehmt kein Ausweis von FIBlern <br> Codewort: Apfelbaum <br> Für die Dienstnummer fragen: Wie viele Apfelbäume hast du im Garten? ',
             'md': 'Primär: Alabaster Weiß <br> Sekundär: Alabaster Weiß <br> Perlerffekt: Alabaster weiß <br> Keine Troll Felgen und keine Fenstertönung <br>',
             'md spezial unit': 'Primär: <br> Sekundär: <br> Perlerffekt: <br>',
             'pd': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: <br>',
