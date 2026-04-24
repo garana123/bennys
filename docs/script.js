@@ -208,6 +208,7 @@
             'md spezial unit': 'Primär: <br> Sekundär: <br> Perlerffekt: <br>',
             'pd': 'Primärfarbe: Matt Schwarz <br> Sekundärfarbe: Matt Schwarz <br> Perleffekt: <br>',
             'tmf': 'Primärfarbe: Shell (braun) <br> Sekundärfarbe: <br> Perleffekt: Shell (braun) <br>',
+            'tmf backstep': 'Primärfarbe: Titanium Grau (braun) <br> Sekundärfarbe: <br> Perleffekt: Elektrisches Rosa <br>',
             'tmf unmarked': 'Primärfarbe: <br> Sekundärfarbe: <br> Perleffekt: <br>',
             'pd cid': 'Primärfarbe: Mitternachtsblau <br> Sekundärfarbe: <br> Perleffekt: Mitternachtsblau <br>', 
             'pd gtf': 'Primärfarbe: <br> Sekundärfarbe: <br> Perleffekt: <br>',
