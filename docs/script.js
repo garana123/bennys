@@ -210,7 +210,7 @@
             'tmf': 'Primärfarbe: Shell (braun) <br> Sekundärfarbe: <br> Perleffekt: Shell (braun) <br>',
             'tmf backstep': 'Primärfarbe: Titanium Grau (braun) <br> Sekundärfarbe: <br> Perleffekt: Elektrisches Rosa <br>',
             'tmf unmarked': 'Primärfarbe: <br> Sekundärfarbe: <br> Perleffekt: <br>',
-            'pd cid': 'Primärfarbe: Mitternachtsblau <br> Sekundärfarbe: <br> Perleffekt: Mitternachtsblau <br>', 
+            'pd cid': 'Primärfarbe: Mitternachtsblau <br> Sekundärfarbe: Mitternachtsblau <br> Perleffekt: Stahlguss (schwarz) <br>', 
             'pd gtf': 'Primärfarbe: <br> Sekundärfarbe: <br> Perleffekt: <br>',
             'pd jugular': 'Primärfarbe: <br> Sekundärfarbe: <br> Perleffekt: <br>', 
             'pd jugulargtf': 'Primärfarbe: <br> Sekundärfarbe: <br> Perleffekt: <br>', 
