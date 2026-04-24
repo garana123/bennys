@@ -218,6 +218,7 @@
             'pd unmarked': 'Primärfarbe:  <br> Sekundärfarbe: <br> Perleffekt: <br>', 
             'unicorn': 'Primärfarbe: <br> Sekundärfarbe:  <br> Perleffekt:  <br> Reifenqualm: ',   
             'blood rose mc': 'Primär: Dunkles Rot <br> Sekundär: <br> Perleffekt: Dunkle Nacht (schwarz)',
+            'blood rose mc ug': 'Primär: Dunkelgrün <br> Sekundär: <br> Perleffekt: Grüner Anis',
             'onepiece': 'Primär: Metallic Grau <br> Sekundär: <br> Perleffekt: Helles Gold',
             'onepiece ug': 'Primär: Matt Schwarz <br> Sekundär: <br> Perleffekt: Helles Gold',
             '069': 'Primär: Verbotenes Blau <br> Sekundär: <br> Perleffekt: Mitternachtsblau',
