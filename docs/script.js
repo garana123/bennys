@@ -2,68 +2,68 @@
     // Preisstruktur
     const priceConfig = {
         'Fulltune': {
-            prices: [10000, 10000, 10000, 10000],
+            prices: [500000, 500000, 500000, 500000],
             selector: '#fulltune'
         },
         'Primärfarbe': {
-            prices: [650, 650, 650, 650],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#primaerfarbe'
         },
         'Sekundärfarbe': {
-            prices: [650, 650, 650, 650],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#sekundaerfarbe'
         },
         'Perleffekt': {
-            prices: [650, 650, 650, 650],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#perleffekt'
         },
         'Nummernschildfarbe': {
-            prices: [150, 150, 150, 150],
+            prices: [30000, 30000, 30000, 30000],
             selector: '#nummernschildfarbe'
         },
         'Custom-Kennzeichen': {
-            prices: [400000, 400000, 400000, 400000],
+            prices: [2000000, 2000000, 2000000, 2000000],
             selector: '#customkennzeichen'
         },
         'Reifenfarbe': {
-            prices: [650, 650, 650, 650],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#reifenfarbe'
         },
         'Reifenqualm': {
-            prices: [650, 650, 650, 650],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#reifenqualm'
         },
         'Xenon Scheinwerfer': {
-            prices: [650, 650, 650, 650],
+            prices: [100000, 100000, 100000, 100000],
             selector: '#xenon'
         },
         'Unterboden': {
-            prices: [650, 650, 650, 650],
+            prices: [100000, 100000, 100000, 100000],
             selector: '#unterboden'
         },
         'felgen': {
-            prices: [750, 750, 750, 750],
+            prices: [200000, 200000, 200000, 200000],
             selector: '#felgen'
         },
         'fenstertoenung': {
-            prices: [250, 250, 250, 250],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#fenstertoenung'
         },
         'headlights': {
             prices: [
                 [0, 0, 0, 0],
-                [150000, 150000, 150000, 150000],
-                [100000, 100000, 100000, 100000]
+                [750000, 750000, 750000, 750000],
+                [500000, 500000, 500000, 500000]
             ],
             selector: '#headlights',
             isDropdown: true
         },
         'Fahrzeugteile': {
-            prices: [450, 450, 450, 450], // Preise pro Stück
+            prices: [50000, 50000, 50000, 50000], // Preise pro Stück
             selector: '#fahrzeugteile-anzahl'
         },
         'Hupen': {
-            prices: [350, 350, 350, 350],
+            prices: [25000, 25000, 25000, 25000],
             selector: '#hupe'
         }
     };
