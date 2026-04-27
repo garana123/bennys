@@ -228,6 +228,7 @@
             'district 67': 'Primär: Paradies Blau <br> Sekundär: <br> Perleffekt: Matt Schwarz',
             'k-town': 'Primär: Matt Schwarz <br> Sekundär: <br> Perleffekt: Hellgrün ',
             'mwk': 'Primär: Dunkelgrün <br> Sekundär: <br> Perleffekt: Renngelb ',
+            'rlm': 'Primär: Weinrot <br> Sekundär: <br> Perleffekt: Torino Rot ',
             'zivi vip2': 'Info: Bekommen 40% auf alle Fahrzeuge'
 
             
