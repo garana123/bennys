@@ -52,8 +52,8 @@
         'headlights': {
             prices: [
                 [0, 0, 0, 0],
-                [750000, 750000, 750000, 750000],
-                [500000, 500000, 500000, 500000]
+                [500000, 500000, 750000, 500000],
+                [250000, 250000, 250000, 250000]
             ],
             selector: '#headlights',
             isDropdown: true
@@ -62,8 +62,12 @@
             prices: [50000, 50000, 50000, 50000], // Preise pro Stück
             selector: '#fahrzeugteile-anzahl'
         },
+        'Sticker': {
+            prices: [50000, 50000, 50000, 50000],
+            selector: '#sticker'
+        },
         'Hupen': {
-            prices: [25000, 25000, 25000, 25000],
+            prices: [50000, 50000, 50000, 50000],
             selector: '#hupe'
         }
     };
