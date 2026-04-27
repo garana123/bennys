@@ -2,19 +2,19 @@
     // Preisstruktur
     const priceConfig = {
         'Fulltune': {
-            prices: [500000, 800000, 500000, 1200000],
+            prices: [500000, 800000, 1200000, 1200000],
             selector: '#fulltune'
         },
         'Primärfarbe': {
-            prices: [50000, 50000, 50000, 150000],
+            prices: [50000, 50000, 150000, 150000],
             selector: '#primaerfarbe'
         },
         'Sekundärfarbe': {
-            prices: [50000, 50000, 50000, 70000],
+            prices: [50000, 50000, 70000, 70000],
             selector: '#sekundaerfarbe'
         },
         'Perleffekt': {
-            prices: [50000, 50000, 50000, 80000],
+            prices: [50000, 50000, 80000, 80000],
             selector: '#perleffekt'
         },
         'Nummernschildfarbe': {
@@ -52,7 +52,7 @@
         'headlights': {
             prices: [
                 [0, 0, 0, 0],
-                [500000, 500000, 750000, 500000],
+                [500000, 500000, 500000, 500000],
                 [250000, 250000, 250000, 250000]
             ],
             selector: '#headlights',
