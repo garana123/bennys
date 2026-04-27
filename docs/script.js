@@ -223,6 +223,7 @@
             'onepiece': 'Primär: Metallic Grau <br> Sekundär: <br> Perleffekt: Helles Gold',
             'onepiece ug': 'Primär: Matt Schwarz <br> Sekundär: <br> Perleffekt: Helles Gold',
             '069': 'Primär: Verbotenes Blau <br> Sekundär: <br> Perleffekt: Mitternachtsblau',
+            '069 ug': 'Primär: Mysthisches Lila <br> Sekundär: <br> Perleffekt: Zellstoffrot',
             '666': 'Primär: Matt Grau <br> Sekundär: <br> Perleffekt: Elektrisches Rosa',
             'district 67': 'Primär: Paradies Blau <br> Sekundär: <br> Perleffekt: Matt Schwarz',
             'k-town': 'Primär: Matt Schwarz <br> Sekundär: <br> Perleffekt: Hellgrün ',
