@@ -223,7 +223,7 @@
             'pd unmarked': 'Primärfarbe: Cauldron (braun) <br> Sekundärfarbe: <br> Perleffekt: Pures Weiß <br>', 
             'unicorn': 'Primärfarbe: <br> Sekundärfarbe:  <br> Perleffekt:  <br> Reifenqualm: ',   
             'blood rose mc': 'Primär: Dunkles Rot <br> Sekundär: <br> Perleffekt: Dunkle Nacht (schwarz)',
-            'blood rose mc ug': 'Primär: Dunkelgrün <br> Sekundär: <br> Perleffekt: Grüner Anis',
+            'blood rose mc ug': 'Primär: Gletscherblau <br> Sekundär: <br> Perleffekt: elektrisch rosa',
             'onepiece': 'Primär: Metallic Grau <br> Sekundär: <br> Perleffekt: Helles Gold',
             'onepiece ug': 'Primär: Matt Schwarz <br> Sekundär: <br> Perleffekt: Helles Gold',
             '069': 'Primär: Verbotenes Blau <br> Sekundär: <br> Perleffekt: Mitternachtsblau',
